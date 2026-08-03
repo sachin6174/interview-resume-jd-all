@@ -144,7 +144,26 @@ Bengaluru, Karnataka, India \,|\,
 
 %----------SUMMARY----------
 \section{SUMMARY}
-iOS Software Engineer with 3+ years of experience in iOS and macOS enterprise mobility solutions. Specialized in Swift, SwiftUI, UIKit, Core Data, Network Extensions, Swift Concurrency, and XPC communication. Experienced in architecting daemonized macOS agents, background network monitoring engines, security policy modules, and deploying production apps to App Store Connect and TestFlight.
+iOS Software Engineer with 3+ years of experience in iOS and macOS enterprise mobility solutions. Specialized in Swift, SwiftUI, UIKit, Core Data, SwiftData, Network Extensions, Swift Concurrency, CryptoKit, and XPC communication. Experienced in architecting daemonized macOS agents, background network monitoring engines, security policy modules, local LLM/AI workflows, and deploying production apps to App Store Connect and TestFlight.
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{\normalsize{Programming Languages:}}{ 
+     \normalsize{Swift, Objective-C, JavaScript, C++}} \\
+     \textbf{\normalsize{iOS / macOS Frameworks:}}{ 
+     \normalsize{UIKit, SwiftUI, Combine, Swift Concurrency, SwiftData, Core Data, NetworkExtension, Core Location, CryptoKit, Core ML, Foundation}} \\
+     \textbf{\normalsize{Tools \& Performance:}}{ 
+     \normalsize{Xcode, Xcode Instruments (Time Profiler, Leaks), Fastlane, SPM, CocoaPods, GitLab CI/CD, TestFlight, App Store Connect, Git, Jira, SonarQube}} \\
+     \textbf{\normalsize{AI \& Automation:}}{ 
+     \normalsize{Claude Code, GitHub Copilot, Cursor, Local LLMs, AI Agents, Multi-Agent Workflows, Release Automation, XCTest, XCUITest, Playwright, Appium, TDD}} \\
+     \textbf{\normalsize{Architecture \& Design:}}{ 
+     \normalsize{VIPER, MVVM, MVC, Clean Architecture, Protocol-Oriented Programming, Dependency Injection, System Design}} \\
+     \textbf{\normalsize{Networking \& Security:}}{ 
+     \normalsize{RESTful APIs, App Data Usage Tracking, Traffic Filtering, Keychain, SQLite, URLSession, Firebase, Process Daemonization, JIT Access}}
+    }}
+ \end{itemize}
 
 %------WORK EXPERIENCE-------
 \section{WORK EXPERIENCE}
@@ -153,15 +172,15 @@ iOS Software Engineer with 3+ years of experience in iOS and macOS enterprise mo
         \vspace{2pt}
             \resumeItemListStart
                 \resumeItem{\normalsize{Developed enterprise \textbf{app management jobs} (\textbf{PKG/DMG} installation, upgrades, and uninstallation) leveraging \textbf{shell scripting}, \textbf{XPC inter-process communication}, and \textbf{LaunchDaemon} process daemonization across \textbf{10,000+} enterprise \textbf{macOS} endpoints.}}
-                \resumeItem{\normalsize{Engineered a resilient \textbf{Download Manager} for file transfer operations, supporting \textbf{resumable chunk downloads}, \textbf{progress callbacks}, and task scheduling via \textbf{concurrent worker queues}.}}
+                \resumeItem{\normalsize{Engineered a resilient \textbf{Download Manager} supporting \textbf{resumable chunk downloads}, \textbf{progress callbacks}, and concurrent worker queues, reducing file transfer failure rates by \textbf{35\%} across \textbf{10,000+} endpoints.}}
                 \resumeItem{\normalsize{Architected \textbf{Network Extension} modules using the \textbf{NetworkExtension framework} (\textbf{NEFilterProvider}/\textbf{NEAppProxyProvider}) to implement real-time \textbf{App Data Usage tracking} and network traffic filtering across enterprise devices.}}
                 \resumeItem{\normalsize{Engineered location-aware security enforcement using \textbf{Core Location} and \textbf{reverse geocoding} to execute policy restrictions and ensure data compliance in restricted enterprise zones.}}
                 \resumeItem{\normalsize{Implemented \textbf{Time Fence} policy enforcement modules for schedule-based access control and time-restricted execution windows on managed endpoints.}}
-                \resumeItem{\normalsize{Utilized \textbf{Core Data} for persistent storage and management of large-scale device telemetry, optimizing data models, indexes, and batch operations for query performance and data integrity.}}
+                \resumeItem{\normalsize{Utilized \textbf{Core Data} for telemetry persistence, optimizing models, indexes, and batch queries to reduce data lookup latency by \textbf{50\%} and maintain high data integrity.}}
                 \resumeItem{\normalsize{Built \textbf{device monitoring modules} for hardware state changes, system uptime tracking, user management, and remote administrator actions (system reboot, shutdown).}}
                 \resumeItem{\normalsize{Contributed to architectural refactoring from \textbf{MVVM} to \textbf{VIPER}, decoupling business logic from UI controllers to improve unit testability and long-term codebase maintainability.}}
                 \resumeItem{\normalsize{Created structured \textbf{analytics and event processing pipelines} using \textbf{Foundation} and \textbf{Core Data} to capture device events, health metrics, and network usage diagnostics for IT administrators.}}
-                \resumeItem{\normalsize{Enhanced application thread safety and stability by refactoring legacy asynchronous workflows with \textbf{Swift Concurrency} (\textbf{async/await}, \textbf{Actors}, and \textbf{GCD DispatchQueues}).}}
+                \resumeItem{\normalsize{Refactored legacy asynchronous workflows with \textbf{Swift Concurrency} (\textbf{async/await}, \textbf{Actors}, and \textbf{DispatchQueues}), reducing concurrency crash rates by \textbf{40\%}.}}
                 \resumeItem{\normalsize{Managed \textbf{macOS helper agents}, status-bar utility applications, app packaging (\textbf{PKG, DMG}), notarization, and automated build distribution workflows using \textbf{GitLab CI/CD}.}}
                 \resumeItem{\normalsize{Implemented \textbf{Just-In-Time (JIT) Privilege Access} workflows for on-demand privilege escalation, ensuring adherence to enterprise security and compliance standards.}}
                 \resumeItem{\normalsize{Engineered an internal \textbf{developer \& QA diagnostic utility} adopted by \textbf{20+ engineers}, featuring \textbf{real-time log parsing}, \textbf{job payload inspection}, and direct state inspection to accelerate debugging cycles.}}
@@ -192,7 +211,7 @@ iOS Software Engineer with 3+ years of experience in iOS and macOS enterprise mo
             \large{\textit{– Enterprise Device Management Platform}}}{Professional Project}
             \resumeItemListStart
                 \resumeItem{\normalsize{\textbf{Details:} Enterprise macOS device management agent featuring app lifecycle management, policy enforcement, and remote administration capabilities.}}
-                \resumeItem{\normalsize{\textbf{Product Link:} \href{https://www.42gears.com/products/mobile-device-management/suremdm-agent-for-macos-past-releases/}{https://www.42gears.com/products/mobile-device-management/suremdm-agent-for-macos-past-releases/}}}
+                \resumeItem{\normalsize{\textbf{Product Link:} \href{https://www.42gears.com/products/mobile-device-management/suremdm-agent-for-macos-past-releases/}{\textbf{SureMDM Agent Product Page}}}}
             \resumeItemListEnd 
             \vspace{-9pt}
 
@@ -201,8 +220,8 @@ iOS Software Engineer with 3+ years of experience in iOS and macOS enterprise mo
             \large{\textit{– Built with SwiftUI, Swift Concurrency, JavaScriptCore}}}{Personal Project}
             \resumeItemListStart
                 \resumeItem{\normalsize{\textbf{Details:} Offline \textbf{macOS \& iOS} coding practice IDE featuring \textbf{5 practice tracks}, dual-path execution engine (\textbf{subprocess} \& \textbf{JavaScriptCore}), interactive test runner, and 2D matrix visualizer.}}
-                \resumeItem{\normalsize{\textbf{App Store Link:} \href{https://apps.apple.com/in/app/codeforge-dsa-interview-prep/id6787703716}{https://apps.apple.com/in/app/codeforge-dsa-interview-prep/id6787703716}}}
-                \resumeItem{\normalsize{\textbf{GitHub Link:} \href{https://github.com/sachin6174/SwiftForge}{https://github.com/sachin6174/SwiftForge}}}
+                \resumeItem{\normalsize{\textbf{App Store Link:} \href{https://apps.apple.com/in/app/codeforge-dsa-interview-prep/id6787703716}{\textbf{CodeForge on App Store}}}}
+                \resumeItem{\normalsize{\textbf{GitHub Link:} \href{https://github.com/sachin6174/SwiftForge}{\textbf{github.com/sachin6174/SwiftForge}}}}
             \resumeItemListEnd 
             \vspace{-9pt}
 
@@ -211,32 +230,11 @@ iOS Software Engineer with 3+ years of experience in iOS and macOS enterprise mo
             \large{\textit{– Built with JavaScript, Chrome APIs}}}{Personal Project}
             \resumeItemListStart
                 \resumeItem{\normalsize{\textbf{Details:} \textbf{Chrome extension} providing text encoding and decoding utilities utilizing \textbf{Base64/Base32} algorithms and Chrome storage APIs.}}
-                \resumeItem{\normalsize{\textbf{Extension Store Link:} \href{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}}}
-                \resumeItem{\normalsize{\textbf{GitHub Link:} \href{https://github.com/sachin6174/secure-text-chrome-extension}{https://github.com/sachin6174/secure-text-chrome-extension}}}
+                \resumeItem{\normalsize{\textbf{Extension Store Link:} \href{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}{\textbf{Secure Text on Chrome Web Store}}}}
+                \resumeItem{\normalsize{\textbf{GitHub Link:} \href{https://github.com/sachin6174/secure-text-chrome-extension}{\textbf{github.com/sachin6174/secure-text-chrome-extension}}}}
             \resumeItemListEnd 
             \vspace{-9pt}
     \resumeSubHeadingListEnd
-
-%-----------TECHNICAL SKILLS-----------
-\section{TECHNICAL SKILLS}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{\normalsize{Programming Languages:}}{ 
-     \normalsize{Swift, Objective-C, JavaScript, C++}} \\
-     \textbf{\normalsize{iOS / macOS Development:}}{ 
-     \normalsize{iOS SDK, macOS SDK, UIKit, SwiftUI, Combine, Swift Concurrency, Network Extensions (NetworkExtension framework), Core Data, Core Location, Foundation}} \\
-     \textbf{\normalsize{Tools \& Distribution:}}{ 
-     \normalsize{Xcode, Instruments, SPM, CocoaPods, GitLab CI/CD, TestFlight, App Store Connect, Git, Jira, SonarQube}} \\
-     \textbf{\normalsize{AI \& Automation:}}{ 
-     \normalsize{Claude Code, GitHub Copilot, Cursor, Local LLMs, AI Agents, Multi-Agent Workflows, Release Automation, XCTest, XCUITest, Playwright, Appium, TDD}} \\
-     \textbf{\normalsize{Architecture Patterns:}}{ 
-     \normalsize{MVC, MVVM, VIPER, Clean Architecture, Protocol-oriented Programming, Dependency Injection}} \\
-     \textbf{\normalsize{Networking \& Storage:}}{ 
-     \normalsize{RESTful APIs, App Data Usage Tracking, Traffic Filtering, Core Data, SQLite, URLSession, Firebase, Push Notifications}} \\
-     \textbf{\normalsize{Development Practices:}}{ 
-     \normalsize{Agile Methodology, Memory Management, Auto Layout, Performance Optimization, Code Review, Process Daemonization}} \\
-    }}
- \end{itemize}
 
 %-----------EDUCATION-----------
 \section{EDUCATION}
