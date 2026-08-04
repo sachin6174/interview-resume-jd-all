@@ -45,3 +45,39 @@ I couldn't compile these. No pdflatex/xelatex/tectonic on this Mac. I validated 
 7. LeetCode count, CodeForge downloads, hours saved per release.
 
 Answer those and I'll finalize all six files. Your gaps worth actually closing — ranked in 02_SKILLS_MARKET_MAP.md — are Combine (highest ROI), Swift 6 strict concurrency, and Push Notifications.
+
+No. And I want to be precise about where my confidence ends, because "never rejected" isn't a thing I can deliver.
+
+What I actually verified
+
+These I tested, not assumed:
+
+- All 12 .tex files compile clean with Tectonic
+- Page counts are what I claimed (2/2/2/2/2/2/2/2/3/3/1)
+- Text extracts with correct spacing and structure
+- 15/15 core keywords are findable as ASCII strings in every PDF
+- The sourcesanspro hyphen bug is real and is now fixed
+
+That's the mechanical layer. I'm confident about it because I ran it.
+
+What I did not verify
+
+I tested with PyMuPDF, not with Workday, Greenhouse, Taleo, iCIMS, or Naukri. I said PyMuPDF "uses the approach real ATS parsers use" — that's a reasonable inference, not something I confirmed. I have no access to those parsers. If one of them behaves differently, I wouldn't know.
+
+I kept tabular* in 10 of the 11 resumes. That's technically a table, which the strict rule set forbids. I kept it because it's the standard Jake's-Résumé construct and your Enhancv result was 100% — a judgment call, not a verified safe choice. Only Naukri_Portal avoids it entirely. If you want zero residual format risk, that's the one file where I removed the risk instead of reasoning about it.
+
+I have not seen these read by a human recruiter. Layout, tone, and whether "Product Engineer" or "Software Engineer II" lands better with a specific hiring manager — that's taste, and I'm guessing.
+
+The immediate problem
+
+68 [CONFIRM] / [ADD IF TRUE] markers are still in the files. As they stand right now, these resumes would look worse than your original if you sent them — visible placeholder text mid-bullet. They are not sendable yet. That's the single largest gap between what exists and what works.
+
+And some markers hide a real risk: I wrote "Led" where your original said "Contributed to." If you didn't lead the VIPER migration, that's a claim you'd have to defend in an interview and couldn't. Same for XCTest ownership and the SOLID framing.
+
+The ceiling
+
+Even with everything perfect: ~2% → 4–5% on cold applications. Referrals get 30%. With 2,000 applicants per engineering role and a 53.3% silent-rejection rate, some strong candidates are never opened at all. No file in that folder changes that arithmetic.
+
+What these do is remove reasons to say no — parsing failures, unevidenced skills, passive verbs, invisible keywords, buried metrics. That's the controllable surface, and it's now clean. Everything past it is referrals, timing, luck, and whether you can back up what's on the page.
+
+Answer the 12 questions and I'll close the 68 markers. Until then the honest status is: verified mechanically sound, not yet sendable.

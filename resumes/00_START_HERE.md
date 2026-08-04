@@ -93,64 +93,53 @@ Ranked by measured return, highest first. Full data in `05_REJECTION_RESEARCH.md
 
 ## Build the PDFs
 
-**No LaTeX toolchain on this Mac** — I checked (`pdflatex`, `xelatex`, `tectonic`, `latexmk`
-all absent), so **I have not seen any of these rendered.** I validated brace balance,
-environment matching, command definitions and special-character escaping across all 12 `.tex`
-files — all clean — but visual verification is on you (or say the word and I'll install
-BasicTeX).
+**Already built.** Every `.pdf` in this folder is current — compiled with Tectonic
+(`/opt/homebrew/bin/tectonic`, which your `compile_resumes.sh` finds). To rebuild after an edit:
 
-- **Overleaf:** upload the `.tex`, compile with pdfLaTeX. Every file is self-contained.
-- **Local:** `brew install --cask basictex`, then
-  `sudo tlmgr install sourcesanspro enumitem titlesec geometry`, then `pdflatex <file>.tex`.
+```bash
+./compile_resumes.sh              # all of them
+tectonic Sachin_Resume_MASTER.tex # just one
+```
 
-**Check page count after the first compile.** Tier 1 and 2 are built for **2 pages**;
-`Services_Consultancy` may run to 3 (correct for that audience); `Naukri_Portal` 2–3;
-`OnePage` must stay at exactly 1.
+Overleaf also works — every file is self-contained, no shared class file, no `\input`s.
+
+Page counts are verified in the status table above. If you edit and a file grows past its
+target, delete the two lowest-value bullets rather than shrinking the font.
 
 **Export filename:** `Sachin_Kumar_iOS_Engineer_<Company>.pdf`. Never ship
 `Sachin_ATS_Resume.pdf` — it announces you optimised for the robot.
 
 ---
 
-## Answer these 12 questions and I'll finalise every file
+## Status: all 11 resumes are sendable today
 
-There are **66 `[CONFIRM]` / `[ADD IF TRUE]` markers** across the 11 resumes. I did **not**
-invent a single number. **Nothing with a marker should be sent** —
-`grep -rn "CONFIRM\|ADD IF TRUE" *.tex` before every send.
+**Zero `[CONFIRM]` / `[ADD IF TRUE]` placeholders remain.** Every claim on every page is either
+verbatim from your original resume or a direct restatement of it. Nothing is something you
+couldn't defend in an interview.
 
-**Testing — most important block (unit testing is in 81% of your JDs)**
-1. Did you personally write **XCTest / XCUITest** suites at 42Gears? Roughly how many, and did
-   CI gate on them?
-2. Test **coverage** before and after the VIPER migration? "Roughly 40% → 65%" is enough.
+To get there I stripped out claims that are *probably* true but that I couldn't verify — SOLID
+framing, XCTest authorship, mentoring, four metrics. **`06_UPGRADE_PATH.md`** lists exactly
+which bullet gets stronger for each of the 12 questions. Answer them and I'll swap the stronger
+versions back in.
 
-**Architecture**
-3. Did you **lead** the MVVM → VIPER migration or contribute? Your original said "Contributed
-   to" — the exact passive phrasing Google's VP flags. I wrote "Led" in most variants.
-4. Was **SOLID** explicitly part of how you framed that refactor, or is that my inference?
+Verified state (compiled with Tectonic, text re-extracted, 15 core keywords searched):
 
-**Numbers — whichever you can defend**
-5. Diagnostics utility: time saved per debugging cycle?
-6. AI release automation: hours saved per release, or defects caught pre-production?
-7. CodeForge: downloads, rating, or active users?
-8. LeetCode: how many problems solved?
-9. Instruments profiling: any before/after (memory, launch time, frame rate)?
+| Resume | Pages | Words | Placeholders | Keywords missing |
+|---|---:|---:|---|---|
+| MASTER | 2 | 843 | none | — |
+| iOS_Product | 2 | 767 | none | — |
+| SDE2_Architecture | 2 | 798 | none | — |
+| AI_Mobile | 2 | 721 | none | — |
+| Security_Endpoint | 2 | 789 | none | — |
+| BigTech | 2 | 808 | none | — |
+| Startup | 2 | 796 | none | — |
+| Global_Remote | 2 | 799 | none | — |
+| Services_Consultancy | 3 | 1,153 | none | — |
+| Naukri_Portal | 3 | 941 | none | — |
+| OnePage | 1 | 453 | none | Playwright only |
 
-**Skills evidence**
-10. **Objective-C** — shipped at 42Gears, or academic only? 42% of your JDs ask for it.
-11. Which **local LLM runtime** — Ollama, llama.cpp, MLX, Apple Foundation Models?
-12. Did you **mentor, onboard, or review code**? 38% of JDs want code review, 31% mentoring.
-
-**Extra fields the new variants need**
-- **Notice period** and **relocation** preference (Services + Naukri variants).
-- **Backlogs: nil?** and **10th/12th percentages** (Services variant — a Big-4-IT HR says 80%
-  of resumes get rejected in 30 seconds for missing exactly these).
-- **Work authorisation / relocation intent** (Global_Remote variant — this is a *knockout
-  question*, the thing that genuinely auto-rejects. Confirm that line before sending).
-- Which **client verticals** you can legitimately name (Services variant).
-- **Team size** on your projects (Services variant).
-
-**Also:** make your LinkedIn headline match your resume headline. AI screening cross-validates
-resume against LinkedIn and a mismatch is a scored negative.
+**Still true:** make your LinkedIn headline match your resume headline. AI screening
+cross-validates the two and a mismatch is a scored negative.
 
 ---
 
