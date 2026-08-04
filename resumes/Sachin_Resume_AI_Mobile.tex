@@ -1,0 +1,217 @@
+%-------------------------------------------------------------------------
+% VARIANT C — AI-AUGMENTED MOBILE ENGINEER
+% Target JDs: Intuit ("AI-native", GenAI awareness), AI-forward product teams,
+%             developer-tooling / DX roles, startups hiring "AI-native" engineers.
+% Emphasis: local LLM evaluation, multi-agent workflows, release automation,
+%           Core ML on-device, agentic AI hackathon result, AI-assisted SDLC.
+%
+% HONESTY GUARDRAIL: this positions Sachin as an ENGINEER WHO APPLIES AI to
+% product and SDLC problems — not as an ML researcher. Do not add model
+% training, MLOps, or research claims that are not backed by real work.
+%-------------------------------------------------------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\usepackage{xcolor}
+
+\usepackage[default]{sourcesanspro}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-5pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeCompany}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #3} \\
+      \textit{\small#2} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeRole}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+{\Huge \textbf{Sachin Kumar}} \\ \vspace{4pt}
+{\large iOS Software Engineer \,\textbar\, AI-Augmented Development \& Automation} \\ \vspace{5pt}
+\small
+Bengaluru, Karnataka, India \,|\, +91 9501841073 \,|\,
+\href{mailto:sachinmehtab@gmail.com}{sachinmehtab@gmail.com} \\ \vspace{2pt}
+\href{https://linkedin.com/in/sachinkumar6174}{linkedin.com/in/sachinkumar6174} \,|\,
+\href{https://github.com/sachin6174}{github.com/sachin6174} \,|\,
+\href{https://www.sachinserver.in}{sachinserver.in} \,|\,
+\href{https://leetcode.com/u/sachinkumar6174/}{leetcode.com/u/sachinkumar6174}
+\end{center}
+
+\vspace{-4pt}
+
+%----------SUMMARY----------
+\section{SUMMARY}
+\vspace{2pt}
+\small iOS and macOS Software Engineer with 3+ years shipping native \textbf{Swift} products, who builds \textbf{AI} into both the product and the engineering process. Designed \textbf{local LLM} evaluation and \textbf{multi-agent workflows} that automate release verification, build validation, and deployment checks on a platform serving \textbf{10,000+ devices}. Selected among the \textbf{top 700 teams from 57,000+ developers} in the \textbf{Google Cloud Agentic AI Hackathon 2025}. Fluent in \textbf{SwiftUI}, \textbf{UIKit}, \textbf{Swift Concurrency}, \textbf{Core ML}, and modern AI developer tooling, with a published App Store app of my own.
+
+\vspace{-2pt}
+
+%------WORK EXPERIENCE-------
+\section{WORK EXPERIENCE}
+    \resumeSubHeadingListStart
+
+        \resumeCompany
+          {\href{https://www.42gears.com/}{42Gears Mobility Systems Pvt. Ltd.}}
+          {Bengaluru, India \,\textbar\, Unified Endpoint Management (UEM) SaaS}
+          {February 2023 -- Present}
+
+        \resumeRole{iOS \& macOS Developer}{July 2023 -- Present}
+            \resumeItemListStart
+                \resumeItem{Designed and deployed \textbf{local LLM} evaluation and \textbf{multi-agent AI workflows} that automate the release pipeline — build verification, deployment validation, and regression checks — measurably reducing human error in release sign-off. \textit{[ADD IF TRUE: X hours saved per release / defect-escape reduction]}}
+                \resumeItem{Ran LLM inference \textbf{locally} rather than through third-party APIs to keep proprietary source and enterprise build artifacts inside the security boundary. \textit{[CONFIRM: which runtime — Ollama, llama.cpp, MLX, Apple Foundation Models?]}}
+                \resumeItem{Built an internal AI-assisted diagnostics utility adopted by \textbf{20+ engineers and QA} that parses live logs, inspects job payloads, and surfaces runtime state, shortening debugging cycles. \textit{[CONFIRM: is the AI layer part of this tool?]}}
+                \resumeItem{Built and shipped native \textbf{Swift} features across \textbf{SwiftUI} and \textbf{UIKit} for iOS and macOS applications running on \textbf{10,000+ enterprise endpoints}.}
+                \resumeItem{Migrated legacy asynchronous code to \textbf{Swift Concurrency} (async/await, actors, structured tasks) from \textbf{GCD}, reducing concurrency-related crash rates by \textbf{40\%}.}
+                \resumeItem{Created structured analytics and event-processing pipelines capturing device events, health metrics, and network usage diagnostics — the telemetry substrate for automated analysis and reporting.}
+                \resumeItem{Optimized \textbf{Core Data} persistence via model redesign, indexing, and batch operations, reducing data lookup latency by \textbf{50\%}.}
+                \resumeItem{Engineered a resumable chunked \textbf{Download Manager} with concurrent worker queues over \textbf{URLSession}, reducing transfer failure rates by \textbf{35\%}.}
+                \resumeItem{Led architectural migration from \textbf{MVVM} to \textbf{VIPER} applying \textbf{SOLID} and dependency injection, making core business logic unit-testable. \textit{[CONFIRM: SOLID framing]}}
+                \resumeItem{Architected macOS system agents with \textbf{XPC}, \textbf{LaunchDaemon}, and \textbf{NetworkExtension} for background policy enforcement and network traffic filtering.}
+                \resumeItem{Automated build, signing, notarization, packaging, and distribution through \textbf{GitLab CI/CD}, and maintained \textbf{XCTest}, \textbf{XCUITest}, \textbf{Playwright}, and \textbf{Appium} regression suites. \textit{[CONFIRM: XCTest ownership]}}
+            \resumeItemListEnd
+
+        \vspace{-4pt}
+        \resumeRole{iOS Developer Intern}{February 2023 -- June 2023}
+            \resumeItemListStart
+                \resumeItem{Delivered features in \textbf{Swift}, \textbf{UIKit}, and \textbf{SwiftUI} with secure local storage via \textbf{Core Data}, \textbf{UserDefaults}, and \textbf{Keychain}; worked in \textbf{Agile} sprints with \textbf{Jira} and \textbf{SonarQube} quality gates.}
+            \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+\vspace{-6pt}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \vspace{1pt}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+            {\textbf{\large{Agentic Gig Platform}} \hspace{0.1cm}
+            \small{\textit{Next.js, Firebase, Python, Kotlin, Google Cloud}}}{Google Cloud Agentic AI Hackathon 2025}
+            \resumeItemListStart
+                \resumeItem{Built an \textbf{AI agent} platform delivering expert agricultural advice to farmers; selected among the \textbf{top 700 teams out of 57,000+ developers} in the Google Cloud Agentic AI Hackathon 2025.}
+                \resumeItem{\href{https://github.com/abhikumar002/Agentic-Gig-Project}{github.com/abhikumar002/Agentic-Gig-Project}}
+            \resumeItemListEnd
+            \vspace{-8pt}
+
+        \resumeProjectHeading
+            {\textbf{\large{CodeForge — DSA \& Interview Prep IDE}} \hspace{0.1cm}
+            \small{\textit{Swift, SwiftUI, Swift Concurrency, JavaScriptCore}}}{Live on the App Store}
+            \resumeItemListStart
+                \resumeItem{Designed, built, and published a native \textbf{macOS and iOS} coding-practice IDE as sole developer — 5 practice tracks, a dual-path execution engine (subprocess and \textbf{JavaScriptCore}), an interactive test runner, and a 2D matrix visualizer — fully offline, no server dependency.}
+                \resumeItem{Owned architecture, tests, \textbf{TestFlight} distribution, \textbf{App Store Connect} submission, and App Review approval. \textit{[ADD IF TRUE: downloads / rating]}}
+                \resumeItem{\href{https://apps.apple.com/in/app/codeforge-dsa-interview-prep/id6787703716}{apps.apple.com/app/id6787703716} \,\textbar\, \href{https://github.com/sachin6174/SwiftForge}{github.com/sachin6174/SwiftForge}}
+            \resumeItemListEnd
+            \vspace{-8pt}
+
+        \resumeProjectHeading
+            {\textbf{\large{Secure Text}} \hspace{0.1cm}
+            \small{\textit{JavaScript, Chrome Extension APIs}}}{Published on Chrome Web Store}
+            \resumeItemListStart
+                \resumeItem{Chrome extension for Base64 and Base32 text encoding and decoding. \href{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}{chromewebstore.google.com/detail/secure-text}}
+            \resumeItemListEnd
+            \vspace{-8pt}
+
+    \resumeSubHeadingListEnd
+
+\vspace{-4pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{AI \& Automation:} Local LLMs, Generative AI (GenAI), AI agents, multi-agent workflows, agentic pipelines, LLM evaluation, prompt engineering, Core ML (on-device inference), Claude Code, GitHub Copilot, Cursor, AI-assisted code review, release automation \\ \vspace{2pt}
+     \textbf{Languages:} Swift, Objective-C, C++, JavaScript, Python, Kotlin, Bash/Shell, SQL \\ \vspace{2pt}
+     \textbf{iOS \& macOS:} SwiftUI, UIKit, Foundation, Combine, Swift Concurrency (async/await, actors, Sendable), GCD/DispatchQueue, Core Data, SwiftData, Core ML, Core Location, CryptoKit, Keychain, NetworkExtension, XPC, LaunchDaemon, Auto Layout \\ \vspace{2pt}
+     \textbf{Architecture:} MVVM, VIPER, MVC, Clean Architecture, SOLID principles, Protocol-Oriented Programming, Dependency Injection, Modularization, System Design \\ \vspace{2pt}
+     \textbf{Testing \& Quality:} XCTest, XCUITest, Unit Testing, TDD, Playwright, Appium, SonarQube, Xcode Instruments, Code Review \\ \vspace{2pt}
+     \textbf{Networking \& Cloud:} REST APIs, URLSession, JSON/Codable, Firebase, Google Cloud, SQLite, Next.js \\ \vspace{2pt}
+     \textbf{Build \& Release:} Xcode, SPM, CocoaPods, Fastlane, Git, GitLab CI/CD, GitHub Actions, TestFlight, App Store Connect, Code Signing, Notarization, Jira, Agile/Scrum
+    }}
+ \end{itemize}
+
+\vspace{-10pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chandigarh Group of Colleges, Landran}{August 2019 -- May 2023}
+      {Bachelor of Engineering in Computer Science and Engineering — CGPA: 7.9/10}{Mohali, Punjab, India}
+  \resumeSubHeadingListEnd
+
+\vspace{-6pt}
+
+%-----------CERTIFICATIONS-----------
+\section{CERTIFICATIONS}
+    \vspace{2pt}
+    \resumeItemListStart
+        \resumeItem{\textbf{\href{http://ninjasfiles.s3.amazonaws.com/certificate18894980e4209379ac28665887f78da42bac5c2.pdf}{System Design}} and \textbf{\href{https://ninjasfiles.s3.amazonaws.com/certificate19853580c201378561a01f48ae87f59e9220db2.pdf}{Data Structures in C++}} — Coding Ninjas, 2022. Solved \textit{[ADD IF TRUE: N]}+ problems on \href{https://leetcode.com/u/sachinkumar6174/}{LeetCode}.}
+    \resumeItemListEnd
+
+\end{document}

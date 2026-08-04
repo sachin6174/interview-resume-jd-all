@@ -1,0 +1,175 @@
+%-------------------------------------------------------------------------
+% VARIANT E — STRICT ONE-PAGE
+% Use when: the posting says "1 page", US/product-company applications,
+% referrals, recruiter cold outreach, career fairs, or any time you want
+% maximum signal density with zero scrolling.
+%
+% This is the MASTER content compressed to the 8 highest-signal bullets.
+% If it spills to 2 pages after you fill in the [ADD IF TRUE] values,
+% delete the two lowest-value bullets rather than shrinking the font.
+%-------------------------------------------------------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+\usepackage[default]{sourcesanspro}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.6in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-6pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-3pt}}}}
+
+\newcommand{\resumeCompany}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #3} \\
+      \textit{\small#2} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeRole}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+\begin{document}
+
+\begin{center}
+{\Huge \textbf{Sachin Kumar}} \\ \vspace{3pt}
+{\large iOS \& macOS Software Engineer} \\ \vspace{4pt}
+\small
+Bengaluru, Karnataka, India \,|\, +91 9501841073 \,|\,
+\href{mailto:sachinmehtab@gmail.com}{sachinmehtab@gmail.com} \\ \vspace{1pt}
+\href{https://linkedin.com/in/sachinkumar6174}{linkedin.com/in/sachinkumar6174} \,|\,
+\href{https://github.com/sachin6174}{github.com/sachin6174} \,|\,
+\href{https://www.sachinserver.in}{sachinserver.in}
+\end{center}
+
+\vspace{-5pt}
+
+\section{SUMMARY}
+\vspace{2pt}
+\small iOS and macOS Software Engineer with 3+ years building enterprise endpoint software running on \textbf{10,000+ managed macOS devices}. Deep in Swift, SwiftUI, UIKit, Swift Concurrency, Core Data, and system frameworks (NetworkExtension, XPC, LaunchDaemon, CryptoKit), owning features from architecture and tests through notarization and App Store Connect release. Shipped an independent app to the App Store.
+
+\vspace{-3pt}
+
+\section{WORK EXPERIENCE}
+    \resumeSubHeadingListStart
+        \resumeCompany
+          {\href{https://www.42gears.com/}{42Gears Mobility Systems Pvt. Ltd.}}
+          {Bengaluru, India \,\textbar\, Unified Endpoint Management SaaS}
+          {February 2023 -- Present}
+        \resumeRole{iOS \& macOS Developer \textnormal{(promoted from iOS Developer Intern)}}{July 2023 -- Present}
+            \resumeItemListStart
+                \resumeItem{Architected macOS system agents for \textbf{SureMDM} using \textbf{LaunchDaemon} daemonization, \textbf{XPC} inter-process communication, and privileged helper tools across \textbf{10,000+ enterprise endpoints}.}
+                \resumeItem{Migrated legacy asynchronous code from \textbf{GCD} to \textbf{Swift Concurrency} (async/await, actors), cutting concurrency-related crash rates by \textbf{40\%}.}
+                \resumeItem{Optimized \textbf{Core Data} persistence through model redesign, indexing, and batch operations, reducing data lookup latency by \textbf{50\%}.}
+                \resumeItem{Engineered a resumable chunked \textbf{Download Manager} with concurrent worker queues over \textbf{URLSession}, reducing transfer failure rates by \textbf{35\%}.}
+                \resumeItem{Built \textbf{NetworkExtension} providers (\texttt{NEFilterProvider}, \texttt{NEAppProxyProvider}) for real-time traffic filtering and per-app data usage tracking.}
+                \resumeItem{Led migration from \textbf{MVVM} to \textbf{VIPER} applying \textbf{SOLID} and dependency injection, making core business logic unit-testable with \textbf{XCTest}. \textit{[CONFIRM]}}
+                \resumeItem{Owned macOS release engineering: \textbf{code signing}, \textbf{notarization}, PKG/DMG packaging, and automated distribution via \textbf{GitLab CI/CD}.}
+                \resumeItem{Automated release validation with local \textbf{LLM} evaluation and \textbf{multi-agent AI workflows}, and built a diagnostics utility adopted by \textbf{20+ engineers}.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\vspace{-7pt}
+
+\section{PROJECTS}
+    \vspace{1pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{CodeForge — DSA \& Interview Prep IDE} \small{\textit{— Swift, SwiftUI, JavaScriptCore}}}{Live on App Store}
+            \resumeItemListStart
+                \resumeItem{Shipped a native macOS and iOS coding-practice IDE solo — 5 tracks, dual-path execution engine, test runner, matrix visualizer. \href{https://apps.apple.com/in/app/codeforge-dsa-interview-prep/id6787703716}{App Store} \,\textbar\, \href{https://github.com/sachin6174/SwiftForge}{github.com/sachin6174/SwiftForge}}
+            \resumeItemListEnd
+            \vspace{-9pt}
+        \resumeProjectHeading
+            {\textbf{Secure Text} \small{\textit{— JavaScript, Chrome Extension APIs}}}{Chrome Web Store}
+            \resumeItemListStart
+                \resumeItem{Published a Base64/Base32 encoding and decoding extension. \href{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}{Chrome Web Store} \,\textbar\, \href{https://github.com/sachin6174/secure-text-chrome-extension}{GitHub}}
+            \resumeItemListEnd
+            \vspace{-9pt}
+    \resumeSubHeadingListEnd
+
+\vspace{-3pt}
+
+\section{TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} Swift, Objective-C, C++, JavaScript, Bash/Shell, SQL \\ \vspace{1pt}
+     \textbf{iOS \& macOS:} SwiftUI, UIKit, Swift Concurrency (async/await, actors), GCD, Combine, Core Data, SwiftData, NetworkExtension, XPC, LaunchDaemon, CryptoKit, Keychain, Core Location, Core ML, Auto Layout \\ \vspace{1pt}
+     \textbf{Architecture \& Testing:} VIPER, MVVM, MVC, Clean Architecture, SOLID, Protocol-Oriented Programming, Dependency Injection, XCTest, XCUITest, TDD, Instruments, Memory Management/ARC, Code Review \\ \vspace{1pt}
+     \textbf{Networking \& Release:} REST APIs, URLSession, JSON/Codable, SQLite, Firebase, Xcode, SPM, CocoaPods, Fastlane, Git, GitLab CI/CD, TestFlight, App Store Connect, Code Signing, Notarization, Jira, Agile \\ \vspace{1pt}
+     \textbf{AI:} Local LLMs, AI agents, multi-agent workflows, Claude Code, GitHub Copilot, Cursor, release automation
+    }}
+ \end{itemize}
+
+\vspace{-11pt}
+
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chandigarh Group of Colleges, Landran}{August 2019 -- May 2023}
+      {B.E. in Computer Science and Engineering — CGPA: 7.9/10}{Mohali, Punjab, India}
+  \resumeSubHeadingListEnd
+
+\vspace{-7pt}
+
+\section{ACHIEVEMENTS}
+    \vspace{2pt}
+    \resumeItemListStart
+        \resumeItem{\textbf{\href{https://github.com/abhikumar002/Agentic-Gig-Project}{Google Cloud Agentic AI Hackathon 2025}} — top 700 teams out of 57,000+ developers. Certified in \href{http://ninjasfiles.s3.amazonaws.com/certificate18894980e4209379ac28665887f78da42bac5c2.pdf}{System Design} and \href{https://ninjasfiles.s3.amazonaws.com/certificate19853580c201378561a01f48ae87f59e9220db2.pdf}{Data Structures in C++} (Coding Ninjas, 2022).}
+    \resumeItemListEnd
+
+\end{document}

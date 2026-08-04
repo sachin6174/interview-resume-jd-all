@@ -1,0 +1,47 @@
+First, the honest framing
+
+You asked for a resume no company can reject. That doesn't exist, and chasing it leads to bad advice. The 2026 data: 92% of recruiters confirm ATS does not auto-reject — only ~8% enable content-based auto-rejection. What rejects you is a knockout question on the form (location, work auth, years). What buries you is ranking and volume. What fixes it is tailoring — measured at 4.23% vs 2.07% interview rate.
+
+Your Enhancv result already showed 100% ATS parse rate. Your LaTeX was never the problem.
+
+What was actually wrong
+
+1. No job title under your name — resumes with the posting's title get 10.6× more interview invitations. One line, and it was missing.
+2. 17 bullets in one role — your 35%/40%/50%/10,000+ numbers were never reached in a 6-second scan.
+3. Skills claimed with no evidence. XCTest, XCUITest, Instruments, Objective-C, REST APIs, TDD sat in your skills list with nothing backing them. This is a named recruiter red flag, and LLM screeners now specifically flag unsupported skill claims. Unit testing appears in 81% of your 26 saved JDs — second only to Swift itself. This was likely costing you more interviews than anything else.
+4. INTERNSHIP as a separate section hid your promotion and split one tenure into two apparent employers.
+5. CodeForge undersold — a solo App Store app at 3 years is rare, framed as a feature list.
+6. Links displayed as words ("LinkedIn"), so URLs were invisible to copy-paste.
+7. One resume for everything.
+
+All seven fixed. Scored your original at 3/5 overall, matching your own tool results (65 / 68 / 83).
+
+What's in interview-resume-jd-all/resumes/
+
+5 resumes, mapped to the archetypes in your own saved JDs:
+- MASTER — iOS + macOS systems (your default)
+- iOS_Product — Meesho, Zeta, Practo, eBay, Speechify, Delta…
+- SDE2_Architecture — ProMobi, HARMAN, AiDash, Capgemini, Movius…
+- AI_Mobile — Intuit, AI-native teams (your rarest differentiator)
+- Security_Endpoint — Jamf, Kandji, Scalefusion, mac agent teams
+- plus OnePage for referrals and 1-page postings
+
+5 docs: 00_START_HERE (which resume when + your 12 questions), 01_ATS_PLAYBOOK (full review + how ATS/AI screening really works), 02_SKILLS_MARKET_MAP (every skill ranked by frequency across your 26 JDs), 03_CONTENT_BANK (bullet library for custom assembly), 04_TAILORING_CHECKLIST (the 10-minute routine).
+
+I also installed the resume-optimizer skill to ~/.claude/skills/ and wrote it a mobile-ios.md keyword file it was missing — it'll auto-activate on "review my resume" in future sessions.
+
+Two things you need to know
+
+I couldn't compile these. No pdflatex/xelatex/tectonic on this Mac. I validated brace balance, environment matching, command definitions, and special-character escaping across all six files — all clean — but I haven't seen them rendered. Use Overleaf (all files are self-contained), or say the word and I'll set up BasicTeX locally.
+
+30 [CONFIRM] / [ADD IF TRUE] markers are still in the files. I did not invent a single number — every metric came from your original. Nothing with a marker should be sent. The most important ones:
+
+1. Did you personally write the XCTest/XCUITest suites, or was that another team? (81% of JDs — this matters most)
+2. Did you lead the MVVM→VIPER migration, or contribute? Your old resume said "Contributed to"; I wrote "Led."
+3. Test coverage before/after that migration?
+4. Objective-C — shipped at 42Gears, or academic only?
+5. Which local LLM runtime — Ollama, llama.cpp, MLX, Foundation Models?
+6. Do you review code / mentor? (38% and 31% of JDs; you were silent on both)
+7. LeetCode count, CodeForge downloads, hours saved per release.
+
+Answer those and I'll finalize all six files. Your gaps worth actually closing — ranked in 02_SKILLS_MARKET_MAP.md — are Combine (highest ROI), Swift 6 strict concurrency, and Push Notifications.

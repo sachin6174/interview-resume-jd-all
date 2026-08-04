@@ -1,0 +1,220 @@
+%-------------------------------------------------------------------------
+% VARIANT D — macOS SECURITY / ENDPOINT / MDM ENGINEER
+% Target JDs: ProMobi (Scalefusion), Jamf, Kandji, Addigy, Hexnode, Ivanti,
+%             CrowdStrike/SentinelOne mac agent teams, HARMAN (MDM/MAM/VPN
+%             bonus skills), fintech & healthcare mobile-security teams.
+% Emphasis: endpoint management, NetworkExtension providers, traffic
+%           filtering, encryption, Keychain/CryptoKit, JIT privilege
+%           escalation, code signing & notarization, compliance policy.
+%
+% This is the most DIFFERENTIATED variant — very few iOS candidates have
+% LaunchDaemon/XPC/NetworkExtension production experience. Use it wherever
+% the JD mentions MDM, UEM, endpoint, security, or system agents.
+%-------------------------------------------------------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\usepackage{xcolor}
+
+\usepackage[default]{sourcesanspro}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-5pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeCompany}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #3} \\
+      \textit{\small#2} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeRole}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+{\Huge \textbf{Sachin Kumar}} \\ \vspace{4pt}
+{\large macOS Systems \& Endpoint Security Engineer \,\textbar\, iOS Developer} \\ \vspace{5pt}
+\small
+Bengaluru, Karnataka, India \,|\, +91 9501841073 \,|\,
+\href{mailto:sachinmehtab@gmail.com}{sachinmehtab@gmail.com} \\ \vspace{2pt}
+\href{https://linkedin.com/in/sachinkumar6174}{linkedin.com/in/sachinkumar6174} \,|\,
+\href{https://github.com/sachin6174}{github.com/sachin6174} \,|\,
+\href{https://www.sachinserver.in}{sachinserver.in} \,|\,
+\href{https://leetcode.com/u/sachinkumar6174/}{leetcode.com/u/sachinkumar6174}
+\end{center}
+
+\vspace{-4pt}
+
+%----------SUMMARY----------
+\section{SUMMARY}
+\vspace{2pt}
+\small macOS systems engineer with 3+ years building the \textbf{SureMDM} endpoint-management agent at 42Gears, deployed across \textbf{10,000+ managed enterprise devices}. Specialized in privileged system agents (\textbf{LaunchDaemon}, \textbf{XPC}, helper tools), \textbf{NetworkExtension} traffic filtering and proxying, data-at-rest encryption with \textbf{CryptoKit} and \textbf{Keychain}, \textbf{Just-In-Time privilege escalation}, and location- and time-based compliance policy enforcement. Owns the trusted-distribution chain end to end: \textbf{code signing}, \textbf{notarization}, and PKG/DMG packaging.
+
+\vspace{-2pt}
+
+%------WORK EXPERIENCE-------
+\section{WORK EXPERIENCE}
+    \resumeSubHeadingListStart
+
+        \resumeCompany
+          {\href{https://www.42gears.com/}{42Gears Mobility Systems Pvt. Ltd.}}
+          {Bengaluru, India \,\textbar\, Unified Endpoint Management (UEM) SaaS}
+          {February 2023 -- Present}
+
+        \resumeRole{iOS \& macOS Developer — SureMDM Agent for macOS}{July 2023 -- Present}
+            \resumeItemListStart
+                \resumeItem{Architected privileged macOS system agents using \textbf{LaunchDaemon} process daemonization, \textbf{XPC} inter-process communication, and privileged helper tools, running as root across \textbf{10,000+ enterprise endpoints}.}
+                \resumeItem{Built \textbf{NetworkExtension} providers (\texttt{NEFilterProvider} content filtering, \texttt{NEAppProxyProvider} flow proxying) delivering real-time network \textbf{traffic filtering} and per-application data usage attribution on managed devices. \textit{[CONFIRM: mention TCP/UDP flow handling if you worked at flow level]}}
+                \resumeItem{Implemented \textbf{Just-In-Time (JIT) privilege access} for on-demand, time-bounded privilege escalation, replacing standing administrator rights and aligning with least-privilege enterprise security policy.}
+                \resumeItem{Led a data-at-rest security migration, moving unencrypted sensitive local storage to encrypted formats via \textbf{CryptoKit} and \textbf{Keychain Services}, and retiring deprecated third-party libraries in favour of first-party Apple SDKs with full backward compatibility.}
+                \resumeItem{Engineered location-aware and schedule-based compliance enforcement — \textbf{Core Location} with reverse geocoding for geofenced policy, plus \textbf{Time Fence} restricted execution windows — to satisfy enterprise data-compliance requirements in restricted zones.}
+                \resumeItem{Built enterprise \textbf{app lifecycle management} (PKG/DMG install, upgrade, and uninstall) combining Swift, \textbf{Bash} scripting, and XPC, replacing manual IT provisioning across the fleet.}
+                \resumeItem{Owned the trusted distribution chain: \textbf{code signing}, \textbf{notarization}, PKG/DMG packaging, entitlement configuration, and automated build distribution through \textbf{GitLab CI/CD}.}
+                \resumeItem{Developed device monitoring and remote administration modules covering hardware state changes, uptime tracking, user management, and administrator-triggered reboot and shutdown actions.}
+                \resumeItem{Engineered a resilient \textbf{Download Manager} with resumable chunked transfers and bounded concurrent worker queues for secure payload delivery, reducing transfer failure rates by \textbf{35\%}.}
+                \resumeItem{Migrated legacy asynchronous code to \textbf{Swift Concurrency} (async/await, actors) from \textbf{GCD}, reducing concurrency-related crash rates by \textbf{40\%} in long-running daemon processes.}
+                \resumeItem{Optimized \textbf{Core Data} telemetry persistence via model redesign, indexing, and batch operations, reducing lookup latency by \textbf{50\%}, and built analytics pipelines surfacing device health and network usage diagnostics to IT administrators.}
+                \resumeItem{Built an internal diagnostics utility adopted by \textbf{20+ engineers and QA} for real-time log parsing, job payload inspection, and live agent state inspection, shortening incident triage.}
+            \resumeItemListEnd
+
+        \vspace{-4pt}
+        \resumeRole{iOS Developer Intern}{February 2023 -- June 2023}
+            \resumeItemListStart
+                \resumeItem{Contributed to PKG/DMG creation, \textbf{code signing}, and \textbf{notarization}; implemented secure local storage using \textbf{Core Data}, \textbf{UserDefaults}, and \textbf{Keychain}; wrote macOS \textbf{shell scripts} and worked in \textbf{Agile} sprints with \textbf{Jira} and \textbf{SonarQube}.}
+            \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+\vspace{-6pt}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \vspace{1pt}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+            {\textbf{\large{SureMDM Agent for macOS}} \hspace{0.1cm}
+            \small{\textit{Enterprise endpoint management platform — shipping product}}}{42Gears}
+            \resumeItemListStart
+                \resumeItem{Production macOS device-management agent covering app lifecycle management, security policy enforcement, network monitoring, and remote administration. \href{https://www.42gears.com/products/mobile-device-management/suremdm-agent-for-macos-past-releases/}{42gears.com — SureMDM Agent for macOS}}
+            \resumeItemListEnd
+            \vspace{-8pt}
+
+        \resumeProjectHeading
+            {\textbf{\large{CodeForge — DSA \& Interview Prep IDE}} \hspace{0.1cm}
+            \small{\textit{Swift, SwiftUI, Swift Concurrency, JavaScriptCore}}}{Live on the App Store}
+            \resumeItemListStart
+                \resumeItem{Designed, built, and published a fully offline native \textbf{macOS and iOS} coding-practice IDE as sole developer, with a sandboxed dual-path execution engine (subprocess and \textbf{JavaScriptCore}) and no server dependency. \textit{[ADD IF TRUE: downloads / rating]}}
+                \resumeItem{\href{https://apps.apple.com/in/app/codeforge-dsa-interview-prep/id6787703716}{apps.apple.com/app/id6787703716} \,\textbar\, \href{https://github.com/sachin6174/SwiftForge}{github.com/sachin6174/SwiftForge}}
+            \resumeItemListEnd
+            \vspace{-8pt}
+
+        \resumeProjectHeading
+            {\textbf{\large{Secure Text}} \hspace{0.1cm}
+            \small{\textit{JavaScript, Chrome Extension APIs}}}{Published on Chrome Web Store}
+            \resumeItemListStart
+                \resumeItem{Chrome extension providing Base64 and Base32 text encoding and decoding via Chrome storage APIs. \href{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}{chromewebstore.google.com/detail/secure-text}}
+            \resumeItemListEnd
+            \vspace{-8pt}
+
+    \resumeSubHeadingListEnd
+
+\vspace{-4pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Endpoint \& Systems:} MDM/UEM, endpoint management, LaunchDaemon/launchd, XPC inter-process communication, privileged helper tools, process daemonization, macOS status-bar agents, device monitoring, remote administration, PKG/DMG packaging, code signing, notarization, entitlements, provisioning profiles \\ \vspace{2pt}
+     \textbf{Security \& Privacy:} CryptoKit, Keychain Services, encryption at rest, Just-In-Time (JIT) privilege escalation, least privilege, policy enforcement, geofencing/time-fencing compliance, secure local storage, security hardening, SDK modernization \\ \vspace{2pt}
+     \textbf{Networking:} NetworkExtension (NEFilterProvider, NEAppProxyProvider), network traffic filtering, application proxying, per-app data usage tracking, REST APIs, URLSession, JSON/Codable \\ \vspace{2pt}
+     \textbf{Languages:} Swift, Objective-C, C++, Bash/Shell scripting, JavaScript, SQL \\ \vspace{2pt}
+     \textbf{iOS \& macOS Frameworks:} SwiftUI, UIKit, Foundation, Combine, Swift Concurrency (async/await, actors, Sendable), GCD/DispatchQueue, Core Data, SwiftData, Core Location, Core ML \\ \vspace{2pt}
+     \textbf{Architecture \& Quality:} VIPER, MVVM, Clean Architecture, SOLID principles, Protocol-Oriented Programming, Dependency Injection, XCTest, XCUITest, TDD, Playwright, Appium, SonarQube, Xcode Instruments, Code Review \\ \vspace{2pt}
+     \textbf{Build \& Automation:} Xcode, SPM, CocoaPods, Fastlane, Git, GitLab CI/CD, TestFlight, App Store Connect, Jira, Agile/Scrum, Local LLMs, AI agents, release automation
+    }}
+ \end{itemize}
+
+\vspace{-10pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chandigarh Group of Colleges, Landran}{August 2019 -- May 2023}
+      {Bachelor of Engineering in Computer Science and Engineering — CGPA: 7.9/10}{Mohali, Punjab, India}
+  \resumeSubHeadingListEnd
+
+\vspace{-6pt}
+
+%-----------ACHIEVEMENTS & CERTIFICATIONS-----------
+\section{ACHIEVEMENTS \& CERTIFICATIONS}
+    \vspace{2pt}
+    \resumeItemListStart
+        \resumeItem{\textbf{\href{http://ninjasfiles.s3.amazonaws.com/certificate18894980e4209379ac28665887f78da42bac5c2.pdf}{System Design}} — Coding Ninjas, February 2022: scalability, load balancing, database design, and microservices architecture.}
+        \resumeItem{\textbf{\href{https://ninjasfiles.s3.amazonaws.com/certificate19853580c201378561a01f48ae87f59e9220db2.pdf}{Data Structures in C++}} — Coding Ninjas, April 2022.}
+        \resumeItem{\textbf{\href{https://github.com/abhikumar002/Agentic-Gig-Project}{Google Cloud Agentic AI Hackathon 2025}} — top 700 teams out of 57,000+ developers.}
+    \resumeItemListEnd
+
+\end{document}
