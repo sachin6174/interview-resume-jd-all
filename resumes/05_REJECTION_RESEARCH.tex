@@ -1,0 +1,398 @@
+%-------------------------------------------------------------------------
+% RESEARCH REPORT — Why resumes get rejected and what gets them accepted
+% Compile with pdfLaTeX (Overleaf works out of the box).
+% Markdown twin: 05_REJECTION_RESEARCH.md
+%-------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{accent}{HTML}{0E5484}
+\definecolor{warn}{HTML}{A03000}
+\definecolor{rulegrey}{HTML}{999999}
+
+\titleformat{\section}{\Large\bfseries\color{accent}}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.5em}{}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=2pt, topsep=3pt}
+\setlist[enumerate]{leftmargin=1.6em, itemsep=2pt, topsep=3pt}
+
+\newcommand{\keyfinding}[1]{\par\vspace{3pt}\noindent\textcolor{warn}{\textbf{#1}}\par\vspace{2pt}}
+
+\title{\textbf{Why Resumes Get Rejected --- and What Gets Them Accepted}\\[4pt]
+\large A research report for Sachin Kumar's iOS/macOS job search}
+\author{Compiled from 2026 recruiter surveys, ATS scan studies,\\
+eye-tracking research, and 26 real iOS job descriptions}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{4pt}
+
+\noindent\textbf{Scope.} This is the second research pass, focused specifically on the
+\emph{reject versus accept} decision. Every claim is sourced. Where a finding
+\textbf{contradicts} earlier advice given in \texttt{01\_ATS\_PLAYBOOK.md}, it is called out
+explicitly --- two findings did.
+
+\vspace{4pt}
+\noindent\rule{\textwidth}{0.4pt}
+
+\tableofcontents
+\vspace{8pt}
+
+%=========================================================
+\section{The numbers on rejection}
+
+\subsection{The dominant cause is not formatting}
+
+\begin{center}
+\begin{tabular}{p{9.2cm} r}
+\hline
+\textbf{Finding} & \textbf{Number} \\
+\hline
+Rejections caused by experience not matching the posting & \textbf{73\%} \\
+Recruiters rejecting for impersonal / untailored applications & \textbf{84\%} \\
+Recruiters rejecting for lack of customization specifically & 54\% \\
+Rejected resumes with \textless 50\% of the posting's required keywords, \emph{even when the candidate had the matching experience} & \textbf{82\%} \\
+Resumes scoring below the 75-point ``qualified'' threshold & 71.4\% \\
+Rejected resumes with a critical format failure & 34\% \\
+Silent-rejection rate in \textbf{software engineering} & \textbf{53.3\%} \\
+\hline
+\end{tabular}
+\end{center}
+
+\keyfinding{Read row four again.}
+82\% of rejected resumes were missing more than half of the posting's keywords
+\emph{despite the candidate actually having that experience}. That is a \textbf{translation
+failure}, not a qualification failure --- and it is precisely the failure mode of the original
+resume: real unit-testing and REST-API work existed, but neither appeared as a bullet.
+
+\subsection{Volume is the silent killer}
+\begin{itemize}
+  \item A typical posting draws \textbf{250 applications}; engineering roles report
+        \textbf{2{,}000+ in the first week}.
+  \item Roughly \textbf{5 interviews result per 180 applicants}.
+  \item \textbf{53.3\%} of software-engineering applicants are \emph{silently} rejected ---
+        no response at all.
+\end{itemize}
+
+\keyfinding{You are not being rejected. You are being out-ranked and never reached.}
+Different problem, different fix.
+
+\subsection{The Google VP's three red flags}
+
+Brian Ong, VP of Recruiting at Google (Forbes, April 2026):
+
+\begin{enumerate}
+  \item \textbf{``Always needing to be right'' / closed-mindedness.} On a resume this reads as
+        stagnant progression and \emph{no certifications within the last three years} --- a
+        signal that you stopped growing.
+
+        \keyfinding{This applies to you directly.}
+        Both of your certifications are from \textbf{2022 --- four years old}. To a
+        Google-style reviewer that reads as ``stopped learning in 2022.'' Fix in Section 4.
+
+  \item \textbf{Inability to handle ambiguity.} \emph{``The ability to thrive in ambiguity is
+        probably the most critical lens.''} Red flag: no examples of pivoting, adapting, or
+        operating without enough resources or information.
+
+        You \emph{have} this --- the legacy-library migration, the MVVM to VIPER refactor, and
+        building a diagnostics tool nobody asked for. It was simply never framed that way.
+
+  \item \textbf{Waiting for leadership instead of being the leader.} \emph{``Deferring to
+        hierarchy all the time.''} On the page this shows up as passive verbs:
+        \textbf{``supported,'' ``assisted,'' ``contributed to,'' ``worked on,'' ``helped
+        with.''}
+
+        \keyfinding{Your original resume opened a bullet with ``Contributed to architectural refactoring\ldots''}
+        That is the exact passive construction named here.
+\end{enumerate}
+
+\subsection{Other documented rejection triggers}
+\begin{itemize}
+  \item \textbf{Unprofessional email} --- 76\% of such resumes ignored.
+        \emph{You are fine.}
+  \item \textbf{Photo, date of birth, marital status, father's name} --- legacy Indian biodata
+        fields. They break parsing, add zero value, create bias risk, and some international
+        ATS platforms \textbf{flag resumes containing photos as non-compliant}.
+        \emph{You have none of these. Keep it that way.}
+  \item \textbf{No side projects} --- 82\% of resumes have none. \emph{You have three, one
+        live on the App Store. A genuine top-18\% advantage that was buried.}
+  \item \textbf{Job hopping / no tenure} --- \emph{You are fine: one employer, continuous,
+        with a promotion.}
+\end{itemize}
+
+%=========================================================
+\section{What actually gets a YES}
+
+\subsection{The 7.4-second scan, measured}
+
+The Ladders eye-tracking study put recruiters in front of real resumes with an eye tracker.
+Average initial screen: \textbf{7.4 seconds} (up from 6.0 in 2012). The measured gaze path:
+
+\begin{enumerate}
+  \item \textbf{Current job title and company} --- \emph{most fixation time of any element}
+  \item Previous title and company
+  \item Right side: employment \textbf{dates}, checking for steady progression
+  \item Down to \textbf{education}
+  \item Then, only if it survived, actual bullet content
+\end{enumerate}
+
+Winning resumes had simple layouts, clear headings, bold titles, bulleted achievements and
+generous white space. Losing resumes had clutter, no white space, \textbf{multiple columns}
+and long sentences.
+
+\keyfinding{Implication.}
+Your job title is the single most-looked-at element on the page --- and the original resume
+rendered it in \emph{italic small text on the second line} of the entry. Every variant now
+places a bold title headline directly under your name.
+
+\subsection{The top third decides everything}
+\begin{itemize}
+  \item Recruiters spend \textbf{80\% of their attention on the top third} of the page.
+  \item Resumes with \textbf{measurable results in the top third are 40\% more likely to be
+        shortlisted}.
+\end{itemize}
+
+\keyfinding{Implication.}
+A summary that is merely a list of framework names wastes the most valuable real estate you
+own. Numbers belong above the fold --- which is why several new variants open with a
+\textbf{Key Achievements} block: three quantified lines before the work history begins.
+
+\subsection{Tailoring, measured three separate ways}
+
+\begin{center}
+\begin{tabular}{l r r}
+\hline
+\textbf{Measure} & \textbf{Untailored} & \textbf{Tailored} \\
+\hline
+Interview rate & 2.07\% & \textbf{4.23\%} \\
+Callbacks & 1$\times$ & \textbf{3$\times$} \\
+Hiring managers who actively prioritise evidence of tailoring & --- & \textbf{55\%} \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Referrals dwarf everything else in this report}
+
+\begin{center}
+\begin{tabular}{l r}
+\hline
+\textbf{Path} & \textbf{Hire rate} \\
+\hline
+Job-board application & 7\% \\
+Referral & \textbf{30\%} \\
+\hline
+\end{tabular}
+\end{center}
+
+Referrals are \textbf{7\% of applications but 30--50\% of all hires}. Referred candidates are
+approximately \textbf{15$\times$ more likely} to be hired.
+
+\keyfinding{This is larger than every resume optimisation in this folder combined.}
+Eleven resumes cannot beat one warm introduction. Use the resumes to \emph{convert} referrals,
+not to replace them.
+
+%=========================================================
+\section{Two corrections to earlier advice}
+
+\subsection{Correction 1 --- Two pages now beat one page}
+
+The \texttt{OnePage} variant was built on the older ``one page under 8 years'' convention.
+The 2026 data reverses this:
+
+\begin{center}
+\begin{tabular}{p{10cm} r}
+\hline
+\textbf{Finding} & \textbf{Number} \\
+\hline
+Recruiters who now \textbf{prefer two-page} resumes & \textbf{68.6\%} \\
+Recruiters who still prefer one page & 21.6\% \\
+HR professionals saying 1--2 pages is ideal ($n$ = 1{,}013) & 82.1\%, with \textbf{51\% preferring two} \\
+Relative preference for two-page over one-page & \textbf{2.3$\times$} \\
+Two-page resumes rated higher on ``comprehensive summary of the candidate'' & \textbf{+21\%} \\
+Time recruiters spend reading a two-page resume & \textbf{more than 2$\times$ longer} \\
+\hline
+\end{tabular}
+\end{center}
+
+Mid-career (3+ years) is explicitly called out as needing two pages, and \textbf{98.8\% of
+recruiters value clean formatting} --- they would rather you use a second page than cram
+page one.
+
+\keyfinding{What changes.}
+\texttt{Sachin\_Resume\_OnePage.tex} is now a \emph{situational} tool: referrals, career
+fairs, postings that explicitly say ``1 page,'' and US early-career applications. \textbf{It
+is not your default.} Your default is a two-page variant.
+
+\subsection{Correction 2 --- Certification recency is a scored signal}
+
+The 2022 Coding Ninjas certificates were previously treated as neutral filler. Per Google's
+VP of Recruiting, \emph{no recent certifications within three years} is read as evidence that
+a candidate stopped growing. Yours are four years old. This is a real, fixable negative.
+
+%=========================================================
+\section{Your specific action list}
+
+Ranked by impact per hour spent.
+
+\begin{enumerate}
+  \item \textbf{Get referrals.} 30\% versus 7\% hire rate. For every target company, find one
+        42Gears alum or second-degree LinkedIn connection. This outweighs everything else here.
+  \item \textbf{Kill every passive verb.} Google's VP names ``supported'' and ``assisted'' as
+        an instant red flag; your original said \emph{``Contributed to architectural
+        refactoring.''}
+  \item \textbf{Earn one recent credential --- this year.} Cheapest honest options, in order:
+        \begin{itemize}
+          \item Ship the \textbf{Swift 6 strict-concurrency migration on CodeForge} and write
+                a short public post about it. This simultaneously closes your \#2 skills gap,
+                proves recent learning, and demonstrates thriving in ambiguity. Best single
+                move on this list.
+          \item An Apple Developer / Swift certification, or a reputable Swift Concurrency
+                course with a dated certificate.
+          \item A conference talk, blog series, or open-source contribution dated 2026 ---
+                demonstrated growth counts, not only formal certificates.
+        \end{itemize}
+  \item \textbf{Put numbers in the top third.} Use the \texttt{Key Achievements} variants.
+  \item \textbf{Make your job title impossible to miss.} Most-fixated element in the
+        eye-tracking study.
+  \item \textbf{Frame the ambiguity stories.} You have three. Do not just list them --- say
+        what was unclear and what you decided.
+  \item \textbf{Apply within 72 hours of posting.} With 2{,}000 applications in week one,
+        queue position is a real variable.
+  \item \textbf{Never send the same PDF twice.} 84\% of recruiters reject impersonal
+        applications.
+\end{enumerate}
+
+%=========================================================
+\section{India-specific findings}
+
+\subsection{Naukri and Indian portals}
+\begin{itemize}
+  \item Naukri runs \textbf{its own parser and search ranking} before any company ATS sees
+        you. Tables, columns, text boxes and graphics scramble it.
+  \item Use \textbf{exact phrases} recruiters type: \texttt{SwiftUI} not ``Swift UI'';
+        \texttt{Objective-C} not ``Obj C''; \texttt{CI/CD} not ``continuous integration''.
+  \item Profile order that ranks: headline $\rightarrow$ current role $\rightarrow$ key skills
+        $\rightarrow$ summary $\rightarrow$ resume upload.
+  \item Razorpay, Swiggy and Zomato now receive thousands of applications per role through
+        Naukri-integrated AI screening.
+\end{itemize}
+
+\subsection{Service companies versus product companies}
+\begin{itemize}
+  \item \textbf{IT services} (TCS, Infosys, Wipro, Cognizant, Capgemini, Accenture,
+        LTIMindtree) hire on a bench-to-project model. They want \textbf{each project listed
+        with stack, your role, team size, and client industry}. A senior Big-4-IT HR quote:
+        \emph{``I can reject 80\% of resumes in 30 seconds because they're missing one of
+        three things: 10th--12th marks, project details, or backlog status.''}
+        Infosys uses \textbf{iRecruit + SmartRecruiters}; Wipro uses \textbf{Phenom People}.
+  \item \textbf{Product companies} want impact, scale, ownership and metrics --- the format
+        you already have.
+\end{itemize}
+
+\subsection{Applying abroad from India}
+\begin{itemize}
+  \item Add \textbf{one line of context} for names a foreign recruiter will not recognise.
+        Recruiters abroad do not know 42Gears or CGC Landran.
+  \item \textbf{US:} achievement-focused, 1--2 pages, ATS-critical.
+  \item \textbf{Europe:} called a ``CV'', two pages standard, profile summary expected,
+        academics weighted more heavily.
+  \item State \textbf{work authorisation and timezone} explicitly for remote roles --- it is a
+        knockout question, and knockout questions are what genuinely auto-reject.
+\end{itemize}
+
+%=========================================================
+\section{The honest bottom line}
+
+You asked for a resume that no recruiter can ignore. Here is what the data actually supports:
+
+\begin{itemize}
+  \item A great resume moves you from roughly \textbf{2\%} to \textbf{4--5\%} response on cold
+        applications.
+  \item A \textbf{referral} moves you to \textbf{30\%}.
+  \item Nothing moves you to 100\%. With 2{,}000 applicants per role and a 53.3\%
+        silent-rejection rate in software engineering, some strong candidates are never
+        opened. That is arithmetic, not a flaw in your resume.
+\end{itemize}
+
+What this resume system \emph{does} guarantee: when a human or an LLM does open yours, there
+is no reason to put it down. No parsing failure, no unevidenced claim, no passive verb, no
+buried metric, no missing title. That is the entire controllable surface. Everything beyond
+it is referrals, timing and volume.
+
+%=========================================================
+\section{Sources}
+
+\subsection*{Rejection data}
+\begin{itemize}\setlength\itemsep{1pt}
+  \item \href{https://www.resumeadapter.com/blog/2026-ats-rejection-report-10000-resume-scans}{ResumeAdapter --- 2026 ATS Rejection Report, 10,000 resume scans}
+  \item \href{https://resume.io/blog/resume-statistics}{Resume.io --- 58 resume statistics 2026}
+  \item \href{https://www.jobsprout.ai/blog/resume-mistakes}{JobSprout --- 10 resume mistakes that get you rejected}
+  \item \href{https://hirocv.com/blog/resume-statistics-2026-data-hiring}{HiroCV --- 50+ resume statistics for 2026}
+  \item \href{https://enhancv.com/blog/ai-hiring-statistics/}{Enhancv --- AI hiring statistics 2026}
+  \item \href{https://www.metaintro.com/blog/real-reasons-qualified-applicants-rejected-how-to-fix}{Metaintro --- Why qualified applicants still get rejected}
+\end{itemize}
+
+\subsection*{Recruiter behaviour}
+\begin{itemize}\setlength\itemsep{1pt}
+  \item \href{https://www.theladders.com/static/images/basicSite/pdfs/TheLadders-EyeTracking-StudyC2.pdf}{Ladders eye-tracking study (PDF)}
+  \item \href{https://www.hrdive.com/news/eye-tracking-study-shows-recruiters-look-at-resumes-for-7-seconds/541582/}{HR Dive --- recruiters look at resumes for 7 seconds}
+  \item \href{https://www.forbes.com/sites/rachelwells/2026/04/06/i-spoke-to-a-google-exec-he-reveals-the-3-resume-red-flags-that-instantly-get-you-rejected/}{Forbes --- Google exec on 3 resume red flags}
+  \item \href{https://brainmanager.io/blog/career/resume-green-flags}{Brainmanager --- 20 resume green flags}
+  \item \href{https://talent.seek.com.au/hiring-advice/article/green-flags-to-look-for-in-candidates}{SEEK --- green flags to look for in candidates}
+\end{itemize}
+
+\subsection*{Resume length}
+\begin{itemize}\setlength\itemsep{1pt}
+  \item \href{https://resumeoptimizerpro.com/blog/ideal-resume-length}{Resume Optimizer Pro --- ideal resume length}
+  \item \href{https://www.gainrep.com/resources/one-page-resume-or-two/}{Gainrep --- one page or two, the 2026 recruiter verdict}
+  \item \href{https://resumeworded.com/can-a-resume-be-two-pages-key-advice}{Resume Worded --- can a resume be two pages}
+\end{itemize}
+
+\subsection*{Referrals}
+\begin{itemize}\setlength\itemsep{1pt}
+  \item \href{https://www.zippia.com/advice/employee-referral-statistics/}{Zippia --- 25 employee referral statistics}
+  \item \href{https://erinapp.com/blog/enterprise-employee-referral-statistics-you-need-to-know-for-2026/}{ERIN --- enterprise referral statistics 2026}
+  \item \href{https://blog.theinterviewguys.com/referred-candidates-get-hired-4x-more-often-so-stop-asking-for-a/}{The Interview Guys --- referred candidates get hired 4x more often}
+\end{itemize}
+
+\subsection*{Big tech and startup}
+\begin{itemize}\setlength\itemsep{1pt}
+  \item \href{https://www.techinterviewhandbook.org/resume/}{Tech Interview Handbook --- FAANG-ready resumes}
+  \item \href{https://mirrorcv.com/resume-guide/software-engineer-faang}{MirrorCV --- FAANG SWE resume guide 2026}
+  \item \href{https://interviewkickstart.com/blogs/articles/software-engineer-resume-for-faang-companies}{Interview Kickstart --- SWE resume for FAANG}
+  \item \href{https://www.recruitingfromscratch.com/blog/how-to-get-a-founding-engineer-job}{Recruiting From Scratch --- what startups screen for}
+  \item \href{https://www.sweresume.app/articles/startup-resume-guide/}{SWE Resume --- startup resume guide}
+\end{itemize}
+
+\subsection*{India}
+\begin{itemize}\setlength\itemsep{1pt}
+  \item \href{https://cvefy.com/blog/ats-resume-format-naukri-india-guide}{CVefy --- ATS resume format for Naukri India}
+  \item \href{https://www.cvforge.in/blog/resume-format-for-tcs-infosys-wipro}{CVForge --- resume format for TCS, Infosys, Wipro and Capgemini}
+  \item \href{https://www.cv-prime.in/blog/ats-resume-mistakes}{CV Prime --- 15 ATS resume mistakes India 2026}
+  \item \href{https://resumevera.com/guides/naukri-profile-optimization}{ResumeVera --- Naukri profile optimization 2026}
+  \item \href{https://rezumea.com/resume-format/india}{Rezumea --- Indian resume format guide 2026}
+  \item \href{https://cvcompose.com/us/blog/personal-information-resume-2026}{CVCompose --- personal information on a resume 2026}
+\end{itemize}
+
+\subsection*{International}
+\begin{itemize}\setlength\itemsep{1pt}
+  \item \href{https://resumeoptimizerpro.com/blog/understanding-international-resumes}{Resume Optimizer Pro --- international resume guide}
+  \item \href{https://www.visualcv.com/blog/international-resume/}{VisualCV --- CV formats for 30+ countries}
+  \item \href{https://www.infiniteresume.com/blog/indian-resume-international-jobs}{Infinite Resume --- Indian resume for international jobs}
+\end{itemize}
+
+\end{document}

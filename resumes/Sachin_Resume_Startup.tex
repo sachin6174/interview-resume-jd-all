@@ -1,0 +1,234 @@
+%-------------------------------------------------------------------------
+% VARIANT G — STARTUP / FOUNDING-ENGINEER
+% Target: seed to Series C startups, founding/early engineer roles,
+%         StockGro, Speechify, Bhanzu, KoinBX, AiDash, YC-style companies,
+%         and any JD using the words "ownership", "0 to 1", "wear many hats",
+%         "ship fast", "ambiguity", "generalist".
+%
+% RESEARCH APPLIED (see 05_REJECTION_RESEARCH):
+%   - Founders screen for three things: OWNERSHIP EVIDENCE, TOLERANCE FOR
+%     AMBIGUITY, and 0-to-1 SHIPPING. Credentials matter far less.
+%   - "Ownership shows up in two moments: a time you shipped something nobody
+%     asked for, and a time you fixed something before it became a fire."
+%     Sachin has both — the diagnostics tool and the security migration.
+%   - Google VP red flag #2 is inability to handle ambiguity; this variant
+%     answers it directly.
+%   - CodeForge leads, because a solo shipped App Store product is the single
+%     strongest startup signal Sachin owns.
+%-------------------------------------------------------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+%----------FONT----------
+% Helvetica/Arial. NOT sourcesanspro: that font maps the ASCII hyphen to
+% U+2011 in the PDF, so "Objective-C", "end-to-end", "Just-In-Time" and
+% "real-time" become unsearchable by any ATS or recruiter typing a normal
+% hyphen. Verified empirically -- see 01_ATS_PLAYBOOK Part 5.
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-5pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeCompany}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #3} \\
+      \textit{\small#2} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeRole}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+{\Huge \textbf{Sachin Kumar}} \\ \vspace{4pt}
+{\large \textbf{Product Engineer \,\textbar\, iOS, macOS \& AI Automation}} \\ \vspace{5pt}
+\small
+Bengaluru, Karnataka, India \,|\, +91 9501841073 \,|\,
+\href{mailto:sachinmehtab@gmail.com}{sachinmehtab@gmail.com} \\ \vspace{2pt}
+\href{https://linkedin.com/in/sachinkumar6174}{linkedin.com/in/sachinkumar6174} \,|\,
+\href{https://github.com/sachin6174}{github.com/sachin6174} \,|\,
+\href{https://www.sachinserver.in}{sachinserver.in} \,|\,
+\href{https://leetcode.com/u/sachinkumar6174/}{leetcode.com/u/sachinkumar6174}
+\end{center}
+
+\vspace{-4pt}
+
+%----------WHAT I'VE SHIPPED (ownership block, top third)----------
+\section{WHAT I'VE SHIPPED}
+    \vspace{2pt}
+    \resumeItemListStart
+        \resumeItem{\textbf{Shipped a product to the App Store alone} — CodeForge, a native macOS and iOS coding IDE. Design, architecture, execution engine, tests, submission, App Review. No team, no PM, no designer.}
+        \resumeItem{\textbf{Built a tool nobody asked for} that 20+ engineers and QA now use daily — after noticing debugging turnaround was the team's biggest hidden cost.}
+        \resumeItem{\textbf{Fixed a risk before it became a fire} — migrated plaintext local storage to encrypted formats and retired deprecated libraries across a live fleet of 10,000+ devices, with zero breakage for users on older OS versions.}
+        \resumeItem{\textbf{Automated my own job away where it was boring} — local LLM and multi-agent workflows that verify builds and validate deployments so release sign-off stopped depending on human diligence.}
+    \resumeItemListEnd
+
+\vspace{-4pt}
+
+%----------SUMMARY----------
+\section{SUMMARY}
+\vspace{2pt}
+\small Product engineer, 3+ years, comfortable owning a problem from ``this is vaguely broken'' to shipped and monitored. Deep on Apple platforms (Swift, SwiftUI, UIKit, Swift Concurrency, system-level macOS), broad enough to have shipped a Chrome extension, a Next.js and Firebase AI product, and a full App Store release solo. I ship, measure, and cut — the numbers below are all release-over-release deltas I own.
+
+\vspace{-2pt}
+
+%------EXPERIENCE-------
+\section{EXPERIENCE}
+    \resumeSubHeadingListStart
+
+        \resumeCompany
+          {\href{https://www.42gears.com/}{42Gears Mobility Systems Pvt. Ltd.}}
+          {Bengaluru, India \,\textbar\, Bootstrapped UEM SaaS \,\textbar\, joined as intern, converted in 5 months}
+          {February 2023 -- Present}
+
+        \resumeRole{Product Engineer, iOS \& macOS}{July 2023 -- Present}
+            \resumeItemListStart
+                \resumeItem{Owned the macOS agent's concurrency rewrite start to finish — audited the legacy GCD code, chose actor isolation over lock-based fixes, and migrated incrementally without a feature freeze, \textbf{cutting concurrency crash rates 40\%}.}
+                \resumeItem{Rebuilt the download pipeline after failure reports with no clear root cause: instrumented it, found partial-transfer loss, and shipped resumable chunked transfers with bounded worker queues, \textbf{cutting failure rates 35\%}.}
+                \resumeItem{Diagnosed and fixed a database bottleneck that had been treated as ``just slow'' — reshaped the \textbf{Core Data} model, added indexes on hot paths, batched writes, \textbf{cutting lookup latency 50\%}.}
+                \resumeItem{Built privileged macOS system agents from scratch — \textbf{LaunchDaemon} daemons, \textbf{XPC} IPC, privileged helpers, \textbf{NetworkExtension} traffic filtering — now running on \textbf{10,000+ customer endpoints}.}
+                \resumeItem{Shipped enterprise app install, upgrade, and uninstall flows (PKG/DMG) in Swift plus shell scripting, replacing a manual IT process end to end.}
+                \resumeItem{Drove the MVVM to \textbf{VIPER} refactor of core modules so business logic could actually be tested, applying \textbf{SOLID} and dependency injection. \textit{[CONFIRM: drove vs contributed]}}
+                \resumeItem{Own my releases: \textbf{XCTest}/\textbf{XCUITest}, code signing, notarization, packaging, and \textbf{GitLab CI/CD} distribution. Nothing goes out that I did not test and ship myself. \textit{[CONFIRM: XCTest ownership]}}
+                \resumeItem{Shipped \textbf{Just-In-Time privilege escalation} and geofence and time-fence policy enforcement — ambiguous compliance requirements turned into concrete, shippable product behaviour.}
+                \resumeItem{Work directly with product, QA, and backend in weekly cycles; review teammates' code and onboard new engineers onto the macOS codebase. \textit{[CONFIRM: mentoring/onboarding]}}
+            \resumeItemListEnd
+
+        \vspace{-4pt}
+        \resumeRole{iOS Engineer Intern}{February 2023 -- June 2023}
+            \resumeItemListStart
+                \resumeItem{Shipped production features in \textbf{Swift}, \textbf{UIKit}, and \textbf{SwiftUI} within the first months; converted to full-time in 5 months.}
+            \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+\vspace{-6pt}
+
+%-----------PROJECTS-----------
+\section{THINGS I BUILT ON MY OWN}
+    \vspace{1pt}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+            {\textbf{\large{CodeForge}} \hspace{0.1cm}
+            \small{\textit{Swift, SwiftUI, Swift Concurrency, JavaScriptCore — solo}}}{Live on the App Store}
+            \resumeItemListStart
+                \resumeItem{A native macOS and iOS coding-practice IDE — 5 practice tracks, an interactive test runner, a 2D matrix visualizer, and a \textbf{dual-path execution engine} (subprocess on macOS, \textbf{JavaScriptCore} on iOS) behind one protocol so both platforms share a test-runner core despite different sandbox rules.}
+                \resumeItem{Fully offline, no backend, no server cost. Shipped through TestFlight and App Review without a team. \textit{[ADD IF TRUE: downloads / rating / retention]}}
+                \resumeItem{\href{https://apps.apple.com/in/app/codeforge-dsa-interview-prep/id6787703716}{apps.apple.com/app/id6787703716} \,\textbar\, \href{https://github.com/sachin6174/SwiftForge}{github.com/sachin6174/SwiftForge}}
+            \resumeItemListEnd
+            \vspace{-8pt}
+
+        \resumeProjectHeading
+            {\textbf{\large{Agentic Gig Platform}} \hspace{0.1cm}
+            \small{\textit{Next.js, Firebase, Python, Kotlin, Google Cloud}}}{Top 700 of 57,000+ developers}
+            \resumeItemListStart
+                \resumeItem{An AI agent platform giving farmers expert agricultural advice, built for the \textbf{Google Cloud Agentic AI Hackathon 2025} — full stack, outside my usual language, under hackathon time pressure. \href{https://github.com/abhikumar002/Agentic-Gig-Project}{github.com/abhikumar002/Agentic-Gig-Project}}
+            \resumeItemListEnd
+            \vspace{-8pt}
+
+        \resumeProjectHeading
+            {\textbf{\large{Secure Text}} \hspace{0.1cm}
+            \small{\textit{JavaScript, Chrome Extension APIs — solo}}}{Published on Chrome Web Store}
+            \resumeItemListStart
+                \resumeItem{Base64 and Base32 encoding utility, built and published to the Chrome Web Store. \href{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}{chromewebstore.google.com/detail/secure-text}}
+            \resumeItemListEnd
+            \vspace{-8pt}
+
+    \resumeSubHeadingListEnd
+
+\vspace{-4pt}
+
+%-----------SKILLS-----------
+\section{TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Deep:} Swift, SwiftUI, UIKit, Swift Concurrency (async/await, actors), Core Data, macOS system programming (XPC, LaunchDaemon, NetworkExtension), CryptoKit/Keychain, App Store release \\ \vspace{2pt}
+     \textbf{Working:} Objective-C, C++, JavaScript, Python, Kotlin, Bash/Shell, SQL, Next.js, Firebase, REST APIs, SQLite, Google Cloud \\ \vspace{2pt}
+     \textbf{How I work:} Ship small and often, instrument before optimizing, write the test when it will actually catch something. XCTest, XCUITest, TDD, code review, Instruments profiling, Git, GitLab CI/CD, GitHub Actions, Fastlane, SPM, Agile \\ \vspace{2pt}
+     \textbf{AI:} Local LLMs, AI agents, multi-agent workflows, Core ML, prompt engineering, Claude Code, Cursor, GitHub Copilot — used daily, in production, not as a demo \\ \vspace{2pt}
+     \textbf{Architecture:} VIPER, MVVM, Clean Architecture, SOLID, protocol-oriented design, dependency injection, modularization, system design
+    }}
+ \end{itemize}
+
+\vspace{-10pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chandigarh Group of Colleges, Landran}{August 2019 -- May 2023}
+      {Bachelor of Engineering in Computer Science and Engineering — CGPA: 7.9/10}{Mohali, Punjab, India}
+  \resumeSubHeadingListEnd
+
+\vspace{-6pt}
+
+\section{ALSO}
+    \vspace{2pt}
+    \resumeItemListStart
+        \resumeItem{\textit{[ADD IF TRUE: N]}+ problems on \href{https://leetcode.com/u/sachinkumar6174/}{LeetCode}. Certified in \href{http://ninjasfiles.s3.amazonaws.com/certificate18894980e4209379ac28665887f78da42bac5c2.pdf}{System Design} and \href{https://ninjasfiles.s3.amazonaws.com/certificate19853580c201378561a01f48ae87f59e9220db2.pdf}{Data Structures in C++}. I write and tinker at \href{https://www.sachinserver.in}{sachinserver.in}.}
+    \resumeItemListEnd
+
+\end{document}

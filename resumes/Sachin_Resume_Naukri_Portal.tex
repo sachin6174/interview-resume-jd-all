@@ -1,0 +1,254 @@
+%-------------------------------------------------------------------------
+% VARIANT J — MAXIMUM-PARSE-SAFETY / JOB PORTAL EDITION
+% Target: Naukri.com, Indeed, Shine, Monster India, LinkedIn Easy Apply,
+%         Workday/Taleo/iCIMS portals, and any consultant or staffing agency
+%         who will re-parse, re-format, or re-type your resume.
+%
+% WHY THIS EXISTS:
+%   Naukri runs ITS OWN parser and search ranking before any company ATS sees
+%   you. Tables, columns, text boxes and graphics scramble it. 34% of rejected
+%   resumes in the 10,000-scan study had a critical format failure.
+%
+% WHAT MAKES THIS DIFFERENT FROM THE OTHER VARIANTS:
+%   *** ZERO tables. *** Every other variant uses a single-row tabular* for
+%   the company/date line — an industry-standard construct that parses fine in
+%   practice (Enhancv gave the original 100%), but which strictly violates the
+%   "no tables for layout" rule. This file removes even that risk: pure linear
+%   top-to-bottom text, one column, no \tabular anywhere, standard headings,
+%   no special glyphs. It cannot be misparsed.
+%
+%   Trade-off: dates sit on their own line rather than right-aligned, so it
+%   looks plainer. That is the point. Use the prettier variants when a human
+%   opens the PDF directly; use this one when a machine eats it first.
+%-------------------------------------------------------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{titlesec}
+
+%----------FONT----------
+% Helvetica/Arial. NOT sourcesanspro: that font maps the ASCII hyphen to
+% U+2011 in the PDF, so "Objective-C", "end-to-end", "Just-In-Time" and
+% "real-time" become unsearchable by any ATS or recruiter typing a normal
+% hyphen. Verified empirically -- see 01_ATS_PLAYBOOK Part 5.
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule\vspace{-4pt}]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt, label=$\bullet$}
+
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\begin{document}
+
+%----------HEADING (contact in the BODY, never a header/footer)----------
+{\LARGE \textbf{Sachin Kumar}}
+
+\vspace{4pt}
+{\large \textbf{iOS Developer $\vert$ macOS Developer $\vert$ Swift Developer}}
+
+\vspace{4pt}
+Email: \href{mailto:sachinmehtab@gmail.com}{sachinmehtab@gmail.com} \\
+Phone: +91 9501841073 \\
+Location: Bengaluru, Karnataka, India \\
+LinkedIn: \href{https://linkedin.com/in/sachinkumar6174}{linkedin.com/in/sachinkumar6174} \\
+GitHub: \href{https://github.com/sachin6174}{github.com/sachin6174} \\
+Portfolio: \href{https://www.sachinserver.in}{sachinserver.in} \\
+LeetCode: \href{https://leetcode.com/u/sachinkumar6174/}{leetcode.com/u/sachinkumar6174} \\
+Total Experience: 3+ years \\
+Notice Period: \textit{[ADD IF TRUE: 30 / 60 / 90 days]}
+
+%----------SUMMARY----------
+\section*{Professional Summary}
+
+iOS Developer and macOS Developer with 3+ years of experience building enterprise mobility
+and endpoint management applications in Swift, deployed across 10,000+ managed devices.
+Experienced in Swift, Objective-C, SwiftUI, UIKit, Swift Concurrency, Core Data, REST API
+integration, MVVM and VIPER architecture, SOLID principles, unit testing with XCTest and
+XCUITest, multithreading, memory management, performance tuning, and CI/CD automation.
+Published an application to the Apple App Store as sole developer. Experienced in the full
+software development life cycle within Agile and Scrum teams.
+
+%----------KEY SKILLS----------
+\section*{Key Skills}
+
+\textbf{Programming Languages:} Swift, Objective-C, C++, JavaScript, Bash, Shell Scripting, SQL
+
+\vspace{3pt}
+\textbf{iOS and macOS:} iOS SDK, macOS SDK, SwiftUI, UIKit, Foundation, Combine, Cocoa,
+Cocoa Touch, Auto Layout, App Lifecycle, Core Data, SwiftData, Core Location, Core ML,
+CryptoKit, Keychain, NetworkExtension, XPC, LaunchDaemon, Human Interface Guidelines
+
+\vspace{3pt}
+\textbf{Concurrency and Performance:} Swift Concurrency, async/await, Actors, Sendable,
+Grand Central Dispatch, GCD, DispatchQueue, Operation Queue, Multithreading,
+Memory Management, ARC, Xcode Instruments, Time Profiler, Leaks, Performance Tuning
+
+\vspace{3pt}
+\textbf{Architecture and Design:} MVVM, MVC, VIPER, Clean Architecture, SOLID Principles,
+OOPs, Protocol-Oriented Programming, Dependency Injection, Design Patterns, Singleton,
+Delegate, Observer, Factory, Modularization, System Design, Low Level Design
+
+\vspace{3pt}
+\textbf{Testing:} XCTest, XCUITest, Unit Testing, UI Testing, Integration Testing,
+Test Driven Development, TDD, Test Automation, Playwright, Appium, SonarQube, Code Review,
+Debugging
+
+\vspace{3pt}
+\textbf{Web Services and Data:} REST API, RESTful Web Services, URLSession, JSON, Codable,
+SQLite, UserDefaults, Firebase, Offline Storage, Caching
+
+\vspace{3pt}
+\textbf{Tools and DevOps:} Xcode, Git, GitLab, GitLab CI/CD, GitHub Actions,
+Swift Package Manager, SPM, CocoaPods, Fastlane, TestFlight, App Store Connect,
+Code Signing, Notarization, PKG, DMG, Jira, Confluence, Agile, Scrum
+
+\vspace{3pt}
+\textbf{Emerging Technologies:} Generative AI, GenAI, Local LLM, AI Agents,
+Multi-Agent Workflows, Prompt Engineering, Release Automation
+
+%----------EXPERIENCE----------
+\section*{Work Experience}
+
+\textbf{42Gears Mobility Systems Private Limited} \\
+Bengaluru, Karnataka, India \\
+Enterprise Mobility Management (EMM) and Unified Endpoint Management (UEM) products \\
+February 2023 to Present
+
+\vspace{4pt}
+\textbf{iOS and macOS Developer} \\
+July 2023 to Present
+
+\begin{itemize}
+  \item Developed and maintained macOS system agents for the SureMDM enterprise device
+        management product using LaunchDaemon process daemonization, XPC inter-process
+        communication, and privileged helper tools, deployed across 10,000+ enterprise endpoints.
+  \item Developed enterprise application lifecycle management modules for PKG and DMG
+        installation, upgrade, and uninstallation using Swift, shell scripting, and XPC.
+  \item Migrated legacy Grand Central Dispatch and DispatchQueue code to Swift Concurrency
+        using async/await and Actors, reducing concurrency-related crash rates by 40 percent.
+  \item Optimized Core Data persistence through data model redesign, indexing, and batch fetch
+        and update operations, reducing data lookup latency by 50 percent.
+  \item Engineered a resumable chunked Download Manager over URLSession with progress
+        callbacks, retry handling, and concurrent worker queues, reducing file transfer failure
+        rates by 35 percent.
+  \item Developed NetworkExtension modules using NEFilterProvider and NEAppProxyProvider for
+        real-time network traffic filtering and per-application data usage tracking.
+  \item Led architectural migration from MVVM to VIPER applying SOLID principles and dependency
+        injection, decoupling business logic from view controllers and improving unit
+        testability. \textit{[CONFIRM]}
+  \item Implemented Just-In-Time privilege escalation, Time Fence scheduling, and Core Location
+        based geofence policy enforcement for enterprise security and compliance.
+  \item Migrated unencrypted sensitive local data to encrypted storage using CryptoKit and
+        Keychain Services, and replaced deprecated third-party libraries with first-party Apple
+        SDKs while maintaining backward compatibility.
+  \item Performed unit testing and UI testing using XCTest and XCUITest, and built automated
+        regression suites using Playwright and Appium. \textit{[CONFIRM]}
+  \item Managed build, code signing, notarization, packaging, and automated distribution through
+        GitLab CI/CD pipelines.
+  \item Developed an internal diagnostic utility adopted by 20 or more engineers and QA
+        providing real-time log parsing, job payload inspection, and live state inspection.
+  \item Automated release verification and deployment validation using local LLM evaluation and
+        multi-agent AI workflows. \textit{[ADD IF TRUE: X hours saved per release]}
+  \item Participated in Agile and Scrum ceremonies, sprint planning, code reviews, and defect
+        triage using Jira, with code quality gates enforced through SonarQube.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{iOS Developer Intern} \\
+February 2023 to June 2023
+
+\begin{itemize}
+  \item Developed features in Swift, UIKit, and SwiftUI using asynchronous programming patterns
+        for iOS and macOS applications.
+  \item Implemented secure local data storage using Core Data, UserDefaults, and Keychain.
+  \item Contributed to PKG and DMG creation, code signing, and notarization; worked in Agile
+        sprints using Jira with SonarQube static analysis.
+\end{itemize}
+
+%----------PROJECTS----------
+\section*{Projects}
+
+\textbf{CodeForge, DSA and Interview Prep IDE} \\
+Technologies: Swift, SwiftUI, Swift Concurrency, JavaScriptCore, XCTest \\
+Published on the Apple App Store, sole developer
+
+\begin{itemize}
+  \item Designed and published an offline macOS and iOS coding practice IDE featuring 5 practice
+        tracks, a dual-path execution engine using subprocess and JavaScriptCore, an interactive
+        test runner, and a 2D matrix visualizer.
+  \item Independently handled architecture, unit testing, TestFlight beta distribution, App Store
+        Connect submission, and App Review approval. \textit{[ADD IF TRUE: downloads, rating]}
+  \item App Store: \href{https://apps.apple.com/in/app/codeforge-dsa-interview-prep/id6787703716}{apps.apple.com/in/app/codeforge-dsa-interview-prep/id6787703716}
+  \item GitHub: \href{https://github.com/sachin6174/SwiftForge}{github.com/sachin6174/SwiftForge}
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Agentic Gig Platform} \\
+Technologies: Next.js, Firebase, Python, Kotlin, Google Cloud \\
+Google Cloud Agentic AI Hackathon 2025
+
+\begin{itemize}
+  \item Built an AI agent platform providing expert agricultural advice to farmers.
+  \item Selected among the top 700 teams out of more than 57,000 developers.
+  \item GitHub: \href{https://github.com/abhikumar002/Agentic-Gig-Project}{github.com/abhikumar002/Agentic-Gig-Project}
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Secure Text} \\
+Technologies: JavaScript, Chrome Extension APIs \\
+Published on the Chrome Web Store
+
+\begin{itemize}
+  \item Built and published a Chrome extension providing Base64 and Base32 text encoding and
+        decoding using Chrome storage APIs.
+  \item Chrome Web Store: \href{https://chromewebstore.google.com/detail/secure-text/ankgchfieiimiijhlcjcongijapefmei}{chromewebstore.google.com/detail/secure-text}
+\end{itemize}
+
+%----------EDUCATION----------
+\section*{Education}
+
+\textbf{Bachelor of Engineering (B.E.), Computer Science and Engineering} \\
+Chandigarh Group of Colleges, Landran, Mohali, Punjab, India \\
+August 2019 to May 2023 \\
+CGPA: 7.9 out of 10
+
+%----------CERTIFICATIONS----------
+\section*{Certifications and Achievements}
+
+\begin{itemize}
+  \item System Design, Coding Ninjas, February 2022. Scalability, load balancing, database
+        design, and microservices architecture.
+        \href{http://ninjasfiles.s3.amazonaws.com/certificate18894980e4209379ac28665887f78da42bac5c2.pdf}{Certificate}
+  \item Data Structures in C++, Coding Ninjas, April 2022. Core data structures, algorithms,
+        and complexity analysis.
+        \href{https://ninjasfiles.s3.amazonaws.com/certificate19853580c201378561a01f48ae87f59e9220db2.pdf}{Certificate}
+  \item Google Cloud Agentic AI Hackathon 2025. Selected among the top 700 teams out of more
+        than 57,000 developers.
+  \item Solved \textit{[ADD IF TRUE: N]} or more Data Structures and Algorithms problems on LeetCode.
+\end{itemize}
+
+%----------ADDITIONAL----------
+\section*{Additional Information}
+
+Languages Known: English, Hindi \\
+Current Location: Bengaluru, Karnataka, India \\
+Willing to Relocate: \textit{[ADD IF TRUE: Yes or No, and preferred cities]}
+
+\end{document}

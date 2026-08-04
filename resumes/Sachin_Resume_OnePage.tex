@@ -21,7 +21,14 @@
 \usepackage{tabularx}
 \usepackage{xcolor}
 
-\usepackage[default]{sourcesanspro}
+%----------FONT----------
+% Helvetica/Arial. NOT sourcesanspro: that font maps the ASCII hyphen to
+% U+2011 in the PDF, so "Objective-C", "end-to-end", "Just-In-Time" and
+% "real-time" become unsearchable by any ATS or recruiter typing a normal
+% hyphen. Verified empirically -- see 01_ATS_PLAYBOOK Part 5.
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
 
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}

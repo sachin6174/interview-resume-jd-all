@@ -1,0 +1,285 @@
+%-------------------------------------------------------------------------
+% VARIANT I — INDIAN IT SERVICES / CONSULTANCY
+% Target: TCS, Infosys, Wipro, Cognizant, Capgemini, Accenture, LTIMindtree,
+%         Tech Mahindra, HCL, Virtusa, Qualitest, Mphasis, Persistent,
+%         Harman (services arm), and any staffing/consulting intermediary.
+%
+% RESEARCH APPLIED (see 05_REJECTION_RESEARCH, Section 5.2):
+%   - Services firms hire on a BENCH-TO-PROJECT model. They read resumes
+%     project-by-project, not company-by-company. Each project needs:
+%     stack, your role, team size, duration, and client/domain context.
+%   - A senior Big-4-IT HR: "I can reject 80% of resumes in 30 seconds
+%     because they're missing one of three things: 10th-12th marks, project
+%     details, or backlog status."  => Education block is explicit here.
+%   - Infosys uses iRecruit + SmartRecruiters; Wipro uses Phenom People.
+%     All are keyword-matching heavy => the skills matrix is deliberately
+%     dense and uses exact search terms.
+%   - This variant is intentionally LONGER and more granular than the
+%     product-company variants. That is correct for this audience.
+%-------------------------------------------------------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+%----------FONT----------
+% Helvetica/Arial. NOT sourcesanspro: that font maps the ASCII hyphen to
+% U+2011 in the PDF, so "Objective-C", "end-to-end", "Just-In-Time" and
+% "real-time" become unsearchable by any ATS or recruiter typing a normal
+% hyphen. Verified empirically -- see 01_ATS_PLAYBOOK Part 5.
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-5pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeCompany}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #3} \\
+      \textit{\small#2} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeRole}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+{\Huge \textbf{Sachin Kumar}} \\ \vspace{4pt}
+{\large \textbf{iOS / macOS Application Developer \,\textbar\, Swift \,\textbar\, 3+ Years}} \\ \vspace{5pt}
+\small
+Bengaluru, Karnataka, India \,|\, +91 9501841073 \,|\,
+\href{mailto:sachinmehtab@gmail.com}{sachinmehtab@gmail.com} \\ \vspace{2pt}
+\href{https://linkedin.com/in/sachinkumar6174}{linkedin.com/in/sachinkumar6174} \,|\,
+\href{https://github.com/sachin6174}{github.com/sachin6174} \,|\,
+\href{https://www.sachinserver.in}{sachinserver.in}
+\end{center}
+
+\vspace{-2pt}
+
+%----------PROFILE SNAPSHOT----------
+\section{PROFILE SNAPSHOT}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Total Experience:} 3+ years (February 2023 -- Present) \,\textbar\, \textbf{Current Role:} iOS \& macOS Developer, 42Gears Mobility Systems \\ \vspace{2pt}
+     \textbf{Primary Skill:} Swift (iOS \& macOS application development) \,\textbar\, \textbf{Secondary:} Objective-C, C++, JavaScript, Shell scripting \\ \vspace{2pt}
+     \textbf{Domain:} Enterprise Mobility Management (EMM) / Unified Endpoint Management (UEM) / Mobile Device Management (MDM) \\ \vspace{2pt}
+     \textbf{Current Location:} Bengaluru \,\textbar\, \textbf{Open to Relocation:} \textit{[ADD IF TRUE: Yes -- Pune / Hyderabad / Chennai / NCR]} \,\textbar\, \textbf{Notice Period:} \textit{[ADD IF TRUE: 30 / 60 / 90 days]} \\ \vspace{2pt}
+     \textbf{Education:} B.E. Computer Science and Engineering, 2023 \,\textbar\, \textbf{CGPA:} 7.9/10 \,\textbar\, \textbf{Backlogs:} \textit{[ADD IF TRUE: Nil]}
+    }}
+ \end{itemize}
+
+\vspace{-8pt}
+
+%----------SUMMARY----------
+\section{PROFESSIONAL SUMMARY}
+\vspace{2pt}
+\small iOS and macOS application developer with 3+ years of hands-on experience in \textbf{Swift}, \textbf{SwiftUI}, \textbf{UIKit}, and \textbf{Objective-C}, delivering enterprise mobility solutions deployed across \textbf{10,000+ managed devices}. Experienced across the complete software development life cycle (SDLC) — requirement analysis, design, development, unit testing, integration testing, defect fixing, deployment, and production support — working in \textbf{Agile/Scrum} teams using \textbf{Jira}. Strong in \textbf{OOPs}, \textbf{SOLID} principles, design patterns, \textbf{MVVM}/\textbf{VIPER} architecture, \textbf{Core Data}, \textbf{REST API} integration, multithreading, memory management, and \textbf{CI/CD} pipeline automation using \textbf{GitLab}.
+
+\vspace{-4pt}
+
+%----------TECHNICAL SKILL MATRIX----------
+\section{TECHNICAL SKILL MATRIX}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages:} Swift, Objective-C, C++, JavaScript, Bash/Shell Scripting, SQL \\ \vspace{2pt}
+     \textbf{Mobile Technologies:} iOS SDK, macOS SDK, SwiftUI, UIKit, Foundation, Combine, Cocoa, Cocoa Touch, Auto Layout, App Lifecycle, Human Interface Guidelines \\ \vspace{2pt}
+     \textbf{Concurrency \& Performance:} Swift Concurrency (async/await, actors, Sendable), Grand Central Dispatch (GCD), DispatchQueue, Operation Queues, Multithreading, Memory Management, ARC, Xcode Instruments (Time Profiler, Leaks, Allocations), Performance Tuning \\ \vspace{2pt}
+     \textbf{Data \& Persistence:} Core Data, SwiftData, SQLite, UserDefaults, Keychain, Offline Storage, Caching, Data Modelling, Indexing, Batch Processing \\ \vspace{2pt}
+     \textbf{Architecture \& Design:} MVVM, MVC, VIPER, Clean Architecture, SOLID Principles, OOPs, Protocol-Oriented Programming, Dependency Injection, Design Patterns (Singleton, Delegate, Observer, Factory, Adapter), Modularization, Reusable Component Libraries, System Design, Low Level Design (LLD) \\ \vspace{2pt}
+     \textbf{Web Services \& Integration:} RESTful APIs, URLSession, JSON, Codable, XML Parsing, Firebase, Third-party SDK Integration \\ \vspace{2pt}
+     \textbf{Apple System Frameworks:} NetworkExtension, XPC, LaunchDaemon/launchd, Core Location, CryptoKit, Security/Keychain Services, Core ML \\ \vspace{2pt}
+     \textbf{Testing \& Quality:} XCTest, XCUITest, Unit Testing, Integration Testing, UI Testing, Test Driven Development (TDD), Test Automation, Playwright, Appium, SonarQube, Code Review, Debugging, Defect Triage \\ \vspace{2pt}
+     \textbf{DevOps \& Tools:} Xcode, Git, GitLab, GitLab CI/CD, GitHub Actions, Swift Package Manager (SPM), CocoaPods, Fastlane, TestFlight, App Store Connect, Code Signing, Notarization, PKG/DMG Packaging, Jira, Confluence \\ \vspace{2pt}
+     \textbf{Methodologies:} Agile, Scrum, Sprint Planning, Daily Stand-ups, Code Reviews, Retrospectives, SDLC, STLC \\ \vspace{2pt}
+     \textbf{Emerging Technologies:} Generative AI, Local LLMs, AI Agents, Multi-Agent Workflows, Prompt Engineering, Release Automation
+    }}
+ \end{itemize}
+
+\vspace{-8pt}
+
+%------EMPLOYMENT-------
+\section{EMPLOYMENT HISTORY}
+    \resumeSubHeadingListStart
+        \resumeCompany
+          {\href{https://www.42gears.com/}{42Gears Mobility Systems Private Limited}}
+          {Bengaluru, Karnataka \,\textbar\, Enterprise Mobility Management (EMM) product organisation}
+          {February 2023 -- Present}
+        \resumeRole{iOS \& macOS Developer}{July 2023 -- Present}
+        \vspace{-2pt}
+        \resumeRole{iOS Developer Intern}{February 2023 -- June 2023}
+    \resumeSubHeadingListEnd
+
+\vspace{-8pt}
+
+%------PROJECT DETAILS-------
+\section{PROJECT DETAILS}
+    \vspace{2pt}
+    \resumeSubHeadingListStart
+
+        %---- PROJECT 1 ----
+        \resumeProjectHeading
+            {\textbf{\large{Project 1: SureMDM Agent for macOS}} \hspace{0.1cm}
+            \small{\textit{— Enterprise Device Management Platform}}}{July 2023 -- Present}
+            \resumeItemListStart
+                \resumeItem{\textbf{Client / Domain:} Enterprise IT, BFSI, Retail, Healthcare and Logistics customers using 42Gears' UEM platform \textit{[CONFIRM which verticals you can name]} \,\textbar\, \textbf{Team Size:} \textit{[ADD IF TRUE: N members]} \,\textbar\, \textbf{Role:} Developer}
+                \resumeItem{\textbf{Environment:} Swift, Objective-C, SwiftUI, UIKit, Core Data, XPC, LaunchDaemon, NetworkExtension, CryptoKit, Xcode, Git, GitLab CI/CD, Jira, SonarQube, macOS}
+                \resumeItem{\textbf{Description:} Enterprise macOS device-management agent providing application lifecycle management, security policy enforcement, network monitoring, device telemetry, and remote administration across a fleet of \textbf{10,000+ managed endpoints}.}
+                \resumeItem{\textbf{Responsibilities:}}
+                \resumeItemListStart
+                    \resumeItem{Designed and developed privileged macOS system agents using \textbf{LaunchDaemon} process daemonization, \textbf{XPC} inter-process communication, and privileged helper tools.}
+                    \resumeItem{Developed application lifecycle management modules for \textbf{PKG/DMG} installation, upgrade, and uninstallation using Swift and shell scripting.}
+                    \resumeItem{Developed \textbf{NetworkExtension} modules (\texttt{NEFilterProvider}, \texttt{NEAppProxyProvider}) for network traffic filtering and per-application data usage tracking.}
+                    \resumeItem{Implemented device monitoring modules for hardware state changes, system uptime tracking, user management, and remote administrator actions such as reboot and shutdown.}
+                    \resumeItem{Implemented \textbf{Just-In-Time (JIT)} privilege escalation, \textbf{Time Fence} scheduling, and \textbf{Core Location} based geofence policy enforcement for enterprise compliance.}
+                    \resumeItem{Performed architectural migration from \textbf{MVVM} to \textbf{VIPER}, applying \textbf{SOLID} principles and dependency injection to improve testability and maintainability. \textit{[CONFIRM]}}
+                    \resumeItem{Optimized \textbf{Core Data} persistence through data model redesign, indexing, and batch operations, achieving a \textbf{50\% reduction} in data lookup latency.}
+                    \resumeItem{Migrated legacy \textbf{GCD} based asynchronous code to \textbf{Swift Concurrency}, achieving a \textbf{40\% reduction} in concurrency-related crash rates.}
+                    \resumeItem{Performed unit and UI testing using \textbf{XCTest} and \textbf{XCUITest}, and automated regression suites using \textbf{Playwright} and \textbf{Appium}. \textit{[CONFIRM]}}
+                    \resumeItem{Managed build, code signing, notarization, packaging, and automated distribution through \textbf{GitLab CI/CD} pipelines.}
+                    \resumeItem{Participated in \textbf{Agile/Scrum} ceremonies, sprint planning, code reviews, and defect triage using \textbf{Jira}, with code quality enforced through \textbf{SonarQube}.}
+                \resumeItemListEnd
+            \resumeItemListEnd
+            \vspace{-6pt}
+
+        %---- PROJECT 2 ----
+        \resumeProjectHeading
+            {\textbf{\large{Project 2: Resilient Download Manager Module}} \hspace{0.1cm}
+            \small{\textit{— Enterprise Payload Delivery Component}}}{Within SureMDM}
+            \resumeItemListStart
+                \resumeItem{\textbf{Environment:} Swift, URLSession, Swift Concurrency, Core Data, macOS \,\textbar\, \textbf{Role:} Developer \,\textbar\, \textbf{Team Size:} \textit{[ADD IF TRUE]}}
+                \resumeItem{\textbf{Description:} Reusable download subsystem for delivering application packages and policy payloads to managed endpoints over unreliable enterprise networks.}
+                \resumeItem{\textbf{Responsibilities:} Designed resumable chunked transfer logic, progress callback interfaces, retry semantics, and a bounded concurrent worker queue, achieving a \textbf{35\% reduction} in file-transfer failure rates across the managed fleet.}
+            \resumeItemListEnd
+            \vspace{-6pt}
+
+        %---- PROJECT 3 ----
+        \resumeProjectHeading
+            {\textbf{\large{Project 3: Internal Developer \& QA Diagnostic Utility}} \hspace{0.1cm}
+            \small{\textit{— Internal Productivity Tool}}}{Within 42Gears}
+            \resumeItemListStart
+                \resumeItem{\textbf{Environment:} Swift, SwiftUI, Foundation, macOS \,\textbar\, \textbf{Role:} Developer (sole owner) \,\textbar\, \textbf{Users:} 20+ engineers and QA}
+                \resumeItem{\textbf{Description:} Internal macOS utility providing real-time log parsing, job payload inspection, and live agent state inspection to reduce defect triage and debugging turnaround for the development and QA teams.}
+                \resumeItem{\textbf{Responsibilities:} Owned requirement identification, design, development, and rollout; adopted by \textbf{20+ engineers and QA} across the organisation. \textit{[ADD IF TRUE: reduced triage time by X\%]}}
+            \resumeItemListEnd
+            \vspace{-6pt}
+
+        %---- PROJECT 4 ----
+        \resumeProjectHeading
+            {\textbf{\large{Project 4: Data Security \& Framework Modernization}} \hspace{0.1cm}
+            \small{\textit{— Security Hardening Initiative}}}{Within SureMDM}
+            \resumeItemListStart
+                \resumeItem{\textbf{Environment:} Swift, CryptoKit, Keychain Services, macOS \,\textbar\, \textbf{Role:} Developer}
+                \resumeItem{\textbf{Description:} Organisation-wide initiative to eliminate unencrypted sensitive data at rest and retire deprecated third-party dependencies from the macOS agent.}
+                \resumeItem{\textbf{Responsibilities:} Migrated plaintext local storage to encrypted formats using \textbf{CryptoKit} and \textbf{Keychain Services}, replaced obsolete legacy libraries with first-party Apple SDKs, and ensured complete \textbf{backward compatibility} for devices on older macOS versions.}
+            \resumeItemListEnd
+            \vspace{-6pt}
+
+        %---- PROJECT 5 ----
+        \resumeProjectHeading
+            {\textbf{\large{Project 5: CodeForge — DSA \& Interview Prep IDE}} \hspace{0.1cm}
+            \small{\textit{— Personal Product, published on Apple App Store}}}{Personal Project}
+            \resumeItemListStart
+                \resumeItem{\textbf{Environment:} Swift, SwiftUI, Swift Concurrency, JavaScriptCore, XCTest, App Store Connect \,\textbar\, \textbf{Role:} Sole Developer}
+                \resumeItem{\textbf{Description:} Offline macOS and iOS coding practice IDE featuring 5 practice tracks, a dual-path execution engine (subprocess and JavaScriptCore), an interactive test runner, and a 2D matrix visualizer.}
+                \resumeItem{\textbf{Responsibilities:} Independently handled architecture, development, unit testing, TestFlight beta distribution, App Store Connect submission, and App Review approval. \href{https://apps.apple.com/in/app/codeforge-dsa-interview-prep/id6787703716}{apps.apple.com/app/id6787703716}}
+            \resumeItemListEnd
+            \vspace{-6pt}
+
+    \resumeSubHeadingListEnd
+
+\vspace{-4pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chandigarh Group of Colleges, Landran}{August 2019 -- May 2023}
+      {Bachelor of Engineering (B.E.), Computer Science and Engineering — CGPA: 7.9/10}{Mohali, Punjab, India}
+  \resumeSubHeadingListEnd
+  \vspace{2pt}
+  \resumeItemListStart
+      \resumeItem{\textit{[ADD IF TRUE: Class XII — Board, Year, Percentage \,\textbar\, Class X — Board, Year, Percentage. Many Indian IT services firms still screen on these; a senior Big-4-IT HR states 80\% of resumes are rejected in 30 seconds for missing 10th/12th marks, project details, or backlog status.]}}
+  \resumeItemListEnd
+
+\vspace{-6pt}
+
+%-----------CERTIFICATIONS-----------
+\section{CERTIFICATIONS \& ACHIEVEMENTS}
+    \vspace{2pt}
+    \resumeItemListStart
+        \resumeItem{\textbf{\href{http://ninjasfiles.s3.amazonaws.com/certificate18894980e4209379ac28665887f78da42bac5c2.pdf}{System Design}} — Coding Ninjas (November 2021 -- February 2022): scalability, load balancing, database design, microservices architecture.}
+        \resumeItem{\textbf{\href{https://ninjasfiles.s3.amazonaws.com/certificate19853580c201378561a01f48ae87f59e9220db2.pdf}{Data Structures in C++}} — Coding Ninjas (January 2022 -- April 2022): core data structures, algorithms, complexity analysis.}
+        \resumeItem{\textbf{\href{https://github.com/abhikumar002/Agentic-Gig-Project}{Google Cloud Agentic AI Hackathon 2025}} — selected among the top 700 teams out of 57,000+ developers; built an AI advisory platform using Next.js, Firebase, Python, and Kotlin.}
+        \resumeItem{Solved \textit{[ADD IF TRUE: N]}+ Data Structures and Algorithms problems on \href{https://leetcode.com/u/sachinkumar6174/}{LeetCode}.}
+    \resumeItemListEnd
+
+\vspace{-6pt}
+
+%-----------DECLARATION (optional, common in Indian services resumes)-----------
+\section{PERSONAL DETAILS}
+    \vspace{2pt}
+    \resumeItemListStart
+        \resumeItem{\textbf{Languages Known:} English, Hindi \,\textbar\, \textbf{Current Location:} Bengaluru, Karnataka \,\textbar\, \textbf{Nationality:} Indian}
+        \resumeItem{\textit{\footnotesize [Deliberately omitted: photograph, date of birth, marital status, father's name. These are legacy biodata fields — they break ATS parsing, add no value, and create bias risk. Do not add them back, even if an older template or a consultant asks.]}}
+    \resumeItemListEnd
+
+\end{document}

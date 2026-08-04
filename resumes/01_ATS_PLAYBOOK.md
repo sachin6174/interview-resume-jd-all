@@ -217,6 +217,83 @@ fold → correct length. All six, in six seconds, or it fails regardless of what
 
 ---
 
+## Part 5 — The font bug I found by actually compiling and parsing the PDFs
+
+This one was not from research. I compiled all 11 resumes with Tectonic, extracted the text
+the way an ATS does, and searched for the keywords a recruiter would type. One failed.
+
+### What was wrong
+
+`\usepackage[default]{sourcesanspro}` — the font in your original template — maps the plain
+ASCII hyphen `-` to **U+2011 (NON-BREAKING HYPHEN)** in the PDF's character map. The page
+*looks* identical. But the extracted text contains a different character, so:
+
+| Recruiter/ATS searches for | Found in your original PDF? |
+|---|---|
+| `Objective-C` | ❌ **No** |
+| `end-to-end` | ❌ No |
+| `Just-In-Time` | ❌ No |
+| `multi-agent` | ❌ No |
+| `real-time` | ❌ No |
+| `Swift`, `SwiftUI`, `XCTest`, `Core Data`, `SOLID` | ✅ Yes (no hyphen) |
+
+**`Objective-C` appears in 42% of your saved JDs.** It was in your skills list, rendered
+perfectly on screen, and was invisible to a keyword search. This is exactly the failure mode
+behind the biggest statistic in `05_REJECTION_RESEARCH.md`: *82% of rejected resumes had
+under 50% of the required keywords present **even though the candidate had the experience***.
+
+This bug was in your original `Sachin_ATS_Resume.tex` too. It is not something any of the
+three checkers you used would report — Enhancv still gave a 100% parse rate, because parse
+rate measures whether text extracts, not whether it extracts as the *right characters*.
+
+### The fix, and how I chose it
+
+I tested every candidate font by compiling and re-extracting:
+
+| Font | `Objective-C` survives extraction? |
+|---|---|
+| `sourcesanspro` (original) | ❌ FAIL |
+| `sourcesanspro` + `[T1]{fontenc}` | ❌ FAIL |
+| **`helvet` (Helvetica/Arial)** | ✅ **PASS** |
+| `FiraSans` | ✅ PASS |
+| `plex-sans` (IBM Plex) | ✅ PASS |
+| `roboto` | ✅ PASS |
+| `lato` | ❌ FAIL |
+| Computer Modern (LaTeX default) | ✅ PASS |
+
+All 11 resumes now use **`\usepackage[scaled=0.92]{helvet}`** — Helvetica/Arial. Chosen over
+the other passing options because it is on every published ATS-safe font list (including the
+one in the installed resume-optimizer skill) and is metric-compatible with Arial, so any
+system that substitutes will substitute cleanly. Page counts and layout are unchanged.
+
+### Verified end state
+
+Every PDF compiled with Tectonic, text re-extracted position-aware, and searched for 15 core
+keywords (`Swift`, `SwiftUI`, `UIKit`, `Objective-C`, `XCTest`, `XCUITest`, `Core Data`,
+`SOLID`, `REST API`, `CI/CD`, `NetworkExtension`, `MVVM`, `VIPER`, `App Store`, `Agile`):
+
+| Resume | Pages | Words | Keywords missing |
+|---|---:|---:|---|
+| MASTER | 2 | 892 | none |
+| iOS_Product | 2 | 811 | none |
+| SDE2_Architecture | 2 | 855 | none |
+| AI_Mobile | 2 | 772 | none |
+| Security_Endpoint | 2 | 806 | none |
+| BigTech | 2 | 877 | none |
+| Startup | 2 | 828 | none |
+| Global_Remote | 2 | 876 | none |
+| Services_Consultancy | 3 | 1,280 | none |
+| Naukri_Portal | 3 | 1,003 | none |
+| OnePage | 1 | 457 | none |
+
+**One caveat on tooling:** `pypdf`'s naive `extract_text()` returns these resumes with no
+spaces between words (`iOSandmacOSSoftwareEngineer`). That is a limitation of that library,
+not of the PDFs — it is true of your original too, and PyMuPDF (position-aware, the approach
+real ATS parsers use) extracts all of them perfectly. If you ever paste a resume into a
+checker and see run-together words, check with a second tool before rewriting anything.
+
+---
+
 ## Sources
 
 **ATS mechanics and 2026 screening**
